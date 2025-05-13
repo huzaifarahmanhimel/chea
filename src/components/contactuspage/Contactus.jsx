@@ -130,7 +130,7 @@ export default function Contactus() {
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={handleSubmit}
-                className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-full w-full md:w-auto flex justify-center items-center transition-all duration-300"
+                className="bg-orange-300 hover:bg-orange-400 text-white font-medium py-3 px-6 rounded-full w-full md:w-auto flex justify-center items-center transition-all duration-300"
               >
                 Send Message
               </motion.button>
