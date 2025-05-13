@@ -87,8 +87,7 @@ const TennisSchoolLanding = () => {
           >
             <h2 className="text-2xl font-bold mb-4">Let's Join Our School</h2>
             <p className="text-gray-300 mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, 
-              luctus nec ullamcorper mattis, pulvinar dapibus leo.
+              Join our tennis school and elevate your game with expert coaching and personalized training.
             </p>
             <motion.button 
               className="bg-lime-500 text-black py-2 px-4 rounded-full hover:bg-lime-600 transition duration-300"
