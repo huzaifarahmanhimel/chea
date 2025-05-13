@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, Clock } from 'lucide-react';
+import COART from '../images/COART.jpg';
 
 const TennisAcademySection = () => {
   const sectionVariants = {
@@ -48,7 +49,7 @@ const TennisAcademySection = () => {
       icon: <Clock className="w-12 h-12 text-yellow-500" />,
       title: "Tennis Court Rent",
       description: "Book high-quality tennis courts for practice, matches, or personal training.",
-      image: "https://i.pinimg.com/736x/86/0f/10/860f10ed6dbf854108f21bf24987db15.jpg"
+      src:{COART},
     }
   ];
 
