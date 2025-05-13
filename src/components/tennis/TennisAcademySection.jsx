@@ -49,7 +49,7 @@ const TennisAcademySection = () => {
       icon: <Clock className="w-12 h-12 text-yellow-500" />,
       title: "Tennis Court Rent",
       description: "Book high-quality tennis courts for practice, matches, or personal training.",
-      src:{COART},
+      image:{COART}
     }
   ];
 
