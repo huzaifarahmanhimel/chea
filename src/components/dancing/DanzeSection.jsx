@@ -80,13 +80,16 @@ export default function DanzeSection() {
             variants={fadeIn}
           >
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-              ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-              ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              
+             Why Wake & Shake?
+              Wake and Shake gathers a diversity of people before the first rays of sunlight to connect to their bodies and earth, feeling the beats and rhythms diving deep into the vibrations of sound under the Gaskessel domes.
             </p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
-              ullamcorper mattis, pulvinar dapibus leo.
+             Doing something good for a balanced mind, body and soul!  
+
+ 
+
+             Start your day feeling energized and balanced
             </p>
           </motion.div>
           
@@ -98,7 +101,7 @@ export default function DanzeSection() {
               className="text-2xl font-script text-gray-800"
               variants={scaleIn}
             >
-              Ellie Madison
+              Ashley Rose loft
             </motion.h3>
             <p className="text-gray-600">CEO Danze</p>
           </motion.div>
