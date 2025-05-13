@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import founder from '../images/founder.jpg';
+import founder from '../images/IMG_8351.jpg';
 
 export default function FounderSection() {
   const [isVisible, setIsVisible] = useState(false);
