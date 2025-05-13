@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-import kids from '../images/kids.jpg  ';
+import kids from '../images/kids.jpg';
 import student from '../images/students.jpg';
 import little from '../images/little.jpg';
 import kidplayer from '../images/IMG_5331.jpg';
