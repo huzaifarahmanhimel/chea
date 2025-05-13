@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Play, User } from 'lucide-react';
-import herosectionImg from '../images/IMG_6631.jpg';
+import herosectionImg from '../images/IMG_6631.JPG';
 
 export default function TennisLandingSection() {
   return (
