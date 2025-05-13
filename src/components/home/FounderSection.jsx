@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import founder from '../images/founder.jpg';
 
 export default function FounderSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -201,7 +202,7 @@ export default function FounderSection() {
               style={{ width: '16rem', height: '16rem' }}
             >
               <img
-                src="https://i.pinimg.com/736x/79/4a/49/794a49120332c45237de18fbd611ec46.jpg"
+                src={founder}
                 alt="Founder"
                 className="object-cover w-full h-full"
               />
