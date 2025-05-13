@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-
+import kids from '../images/kids.jpg  ';
+import students from '../images/students.jpg';
+import little from '../images/little.jpg';
+import kidplayer from '../images/IMG_5331.jpg';
 const TennisSchoolLanding = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   
@@ -101,7 +104,7 @@ const TennisSchoolLanding = () => {
             whileHover={hoverScale}
           >
             <img 
-              src="https://i.pinimg.com/736x/d1/49/ef/d149eff271e1e70581944ccad8de889f.jpg" 
+              src={kids}
               alt="Tennis racket" 
               className="w-full h-full object-contain"
             />
@@ -116,7 +119,7 @@ const TennisSchoolLanding = () => {
             whileHover={hoverScale}
           >
             <img 
-              src="https://i.pinimg.com/736x/32/e2/bc/32e2bc2f7417c438a65dbdf67fb9dec8.jpg" 
+              src={students}
               alt="Tennis player" 
               className="w-full h-full object-cover"
             />
@@ -127,7 +130,7 @@ const TennisSchoolLanding = () => {
             whileHover={hoverScale}
           >
             <img 
-              src="https://i.pinimg.com/736x/aa/da/0f/aada0f16575fcb32b03a59656f5a1f77.jpg" 
+              src={little}
               alt="Tennis player holding ball" 
               className="w-full h-full object-cover"
             />
@@ -138,7 +141,7 @@ const TennisSchoolLanding = () => {
             whileHover={hoverScale}
           >
             <img 
-              src="https://i.pinimg.com/736x/d1/af/d0/d1afd06a173238f8abcbf9a1271d9ea8.jpg" 
+              src={kidplayer}
               alt="Tennis player in action" 
               className="w-full h-full object-cover"
             />
