@@ -119,7 +119,7 @@ const DanceClassSection = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">CHOOSE YOUR DANCE CLASS</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+            Wake up to charge your batteries for the day and get your morning dopamine boost on the dance floor.
           </p>
         </div>
         
