@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Play, User } from 'lucide-react';
+import herosectionImg from '../images/IMG_6631.jpg';
 
 export default function TennisLandingSection() {
   return (
@@ -82,7 +83,7 @@ export default function TennisLandingSection() {
             }}
           >
             <img 
-              src="https://i.pinimg.com/736x/2b/58/58/2b585804175a4b4cbc06f16b53b3e078.jpg" 
+              src={herosectionImg}
               alt="Tennis Player" 
               className="rounded-xl shadow-2xl object-cover h-[600px] w-full z-30 relative"
             />
