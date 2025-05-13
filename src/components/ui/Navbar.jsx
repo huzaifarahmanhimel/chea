@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,21 +34,21 @@ export default function Navbar() {
 
             {/* Center section: Navigation Links (Desktop) */}
             <div className="hidden md:flex items-center space-x-8">
-              <a href="/" className="font-medium text-gray-600 hover:text-gray-900 border-b-2 border-transparent hover:border-gray-900 transition-all pb-1">HOME</a>
-              <a href="MassageParlour" className="font-medium text-orange-300 hover:text-white border-b-2 border-transparent hover:border-orange-300 transition-all pb-1">MASSAGE PARLOUR</a>
-              <a href="DancingPages" className="font-medium text-orange-300 hover:text-white border-b-2 border-transparent hover:border-orange-300 transition-all pb-1">WEAK & SHAKE</a>
+              <Link to="/" className="font-medium text-gray-600 hover:text-gray-900 border-b-2 border-transparent hover:border-gray-900 transition-all pb-1">HOME</Link>
+              <Link to="/MassageParlour" className="font-medium text-orange-300 hover:text-white border-b-2 border-transparent hover:border-orange-300 transition-all pb-1">MASSAGE PARLOUR</Link>
+              <Link to="/DancingPages" className="font-medium text-orange-300 hover:text-white border-b-2 border-transparent hover:border-orange-300 transition-all pb-1">WEAK & SHAKE</Link>
 
               {/* Logo */}
-              <a href="#" className=" text-orange-200 text-3xl font-serif tracking-widest">CHEA</a>
+              <Link to="#" className=" text-orange-200 text-3xl font-serif tracking-widest">CHEA</Link>
 
-              <a href="TennisPage" className="font-medium text-orange-300 hover:text-white border-b-2 border-transparent hover:border-orange-300 transition-all pb-1">TENNIS</a>
-              <a href="FoodBusiness" className="font-medium text-green-600 hover:text-black border-b-2 border-transparent hover:border-emerald-950 transition-all pb-1">HEALTHY FOOD</a>
-              <a href="contactus" className="font-medium text-orange-300 hover:text-white border-b-2 border-transparent hover:border-orange-300 transition-all pb-1">CONTACT US</a>
+              <Link to="/TennisPage" className="font-medium text-orange-300 hover:text-white border-b-2 border-transparent hover:border-orange-300 transition-all pb-1">TENNIS</Link>
+              <Link to="/FoodBusiness" className="font-medium text-green-600 hover:text-black border-b-2 border-transparent hover:border-emerald-950 transition-all pb-1">HEALTHY FOOD</Link>
+              <Link to="/contactus" className="font-medium text-orange-300 hover:text-white border-b-2 border-transparent hover:border-orange-300 transition-all pb-1">CONTACT US</Link>
             </div>
 
             {/* Center logo for mobile */}
             <div className="md:hidden flex justify-center flex-1">
-              <a href="#" className="text-2xl font-serif tracking-widest">CHEA</a>
+              <Link to="#" className="text-2xl font-serif tracking-widest">CHEA</Link>
             </div>
 
             {/* Right section: Menu button (mobile) */}
@@ -78,12 +79,12 @@ export default function Navbar() {
         {/* Mobile menu */}
         <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} bg-white shadow-lg`}>
           <div className="px-2 pt-2 pb-4 space-y-3">
-            <a href="/" className="block px-3 py-2 text-base font-medium text-center text-gray-700 hover:bg-gray-100 hover:text-gray-900">HOME</a>
-            <a href="MassageParlour" className="block px-3 py-2 text-base font-medium text-center text-gray-700 hover:bg-gray-100 hover:text-gray-900">MASSAGE PARLOUR</a>
-            <a href="DancingPages" className="block px-3 py-2 text-base font-medium text-center text-gray-700 hover:bg-gray-100 hover:text-gray-900">WEAK & SHAKE</a>
-            <a href="TennisPage" className="block px-3 py-2 text-base font-medium text-center text-gray-700 hover:bg-gray-100 hover:text-gray-900">TENNIS</a>
-            <a href="FoodBusiness" className="block px-3 py-2 text-base font-medium text-center text-gray-700 hover:bg-gray-100 hover:text-gray-900">HEALTHY FOOD</a>
-            <a href="contactus" className="block px-3 py-2 text-base font-medium text-center text-gray-700 hover:bg-gray-100 hover:text-gray-900">CONTACT US</a>
+            <Link to="/" className="block px-3 py-2 text-base font-medium text-center text-gray-700 hover:bg-gray-100 hover:text-gray-900">HOME</Link>
+            <Link to="MassageParlour" className="block px-3 py-2 text-base font-medium text-center text-gray-700 hover:bg-gray-100 hover:text-gray-900">MASSAGE PARLOUR</Link>
+            <Link to="DancingPages" className="block px-3 py-2 text-base font-medium text-center text-gray-700 hover:bg-gray-100 hover:text-gray-900">WEAK & SHAKE</Link>
+            <Link to="TennisPage" className="block px-3 py-2 text-base font-medium text-center text-gray-700 hover:bg-gray-100 hover:text-gray-900">TENNIS</Link>
+            <Link to="FoodBusiness" className="block px-3 py-2 text-base font-medium text-center text-gray-700 hover:bg-gray-100 hover:text-gray-900">HEALTHY FOOD</Link>
+            <Link to="contactus" className="block px-3 py-2 text-base font-medium text-center text-gray-700 hover:bg-gray-100 hover:text-gray-900">CONTACT US</Link>
           </div>
         </div>
       </nav>

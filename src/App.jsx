@@ -19,11 +19,11 @@ const router = createBrowserRouter([
     element: <AppLayout />,
     children: [
       { path: '/', element: <HomePage /> },
-      { path: "contactus", element: <Contactus /> },
-      { path: "MassageParlour", element: <MassagwepageFull /> },
-      { path: "FoodBusiness", element: <FoodBusiness /> },
-      { path: "DancingPages", element: <DancingPages /> },
-      { path: "TennisPage", element: <TennisPage /> }
+      { path: "/contactus", element: <Contactus /> },
+      { path: "/MassageParlour", element: <MassagwepageFull /> },
+      { path: "/FoodBusiness", element: <FoodBusiness /> },
+      { path: "/DancingPages", element: <DancingPages /> },
+      { path: "/TennisPage", element: <TennisPage /> }
     ]
   }]
 );
