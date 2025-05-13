@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Play, Award, Calendar, Users, Dumbbell, Heart, ChevronRight } from 'lucide-react';
+import founder from '../images/IMG_8351.jpg';
 
 export default function TennisSuggestions() {
   const [counter, setCounter] = useState(0);
@@ -144,7 +145,7 @@ export default function TennisSuggestions() {
               <div className="absolute -inset-1 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
               <div className="relative overflow-hidden rounded-lg">
                 <img
-                  src="https://i.pinimg.com/736x/86/f0/f6/86f0f6a01d53dc85f559c09a867b548a.jpg"
+                  src={founder}
                   alt="Tennis player with racket"
                   className="h-auto max-h-96 object-contain transform transition duration-500 group-hover:scale-105"
                 />
