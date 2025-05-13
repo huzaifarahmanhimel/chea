@@ -37,8 +37,7 @@ export default function NewsletterSection() {
           <div className={`md:w-1/2 mb-6 md:mb-0 pr-0 md:pr-8 transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Join Our Newsletter</h2>
             <p className="text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore
+             Join our tennis school and elevate your game with expert coaching and personalized training. Whether you're a beginner or advanced, we’ve got the perfect program for you!
             </p>
           </div>
           
