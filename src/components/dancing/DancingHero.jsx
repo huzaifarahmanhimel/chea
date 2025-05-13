@@ -134,18 +134,7 @@ export default function DancingHero() {
         </div>
       </div>
 
-      {/* Dancer Overlay Image */}
-      <div className={`absolute inset-0 transition-all duration-1500 ${
-        isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-110'
-      }`}>
-        <div className="h-full w-full flex items-center justify-center overflow-hidden">
-          <img
-            src="/api/placeholder/800/1200"
-            alt="Dancer with flowing fabric"
-            className="h-full max-w-none object-cover"
-          />
-        </div>
-      </div>
+     
 
       {/* Video Modal */}
       {showVideo && (
