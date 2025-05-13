@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import founder from '../images/IMG_8351.jpg';
+import coart from '../images/COART.jpg';
+
 
 const LandingTennis = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -31,7 +34,7 @@ const LandingTennis = () => {
                 <path d="M1 12h22"></path>
                 <path d="M12 1c3.3 2.667 5 5.667 5 9s-1.7 6.333-5 9c-3.3-2.667-5-5.667-5-9s1.7-6.333 5-9z"></path>
               </svg>
-              WELCOME TO TOPSPIN
+              WELCOME TO LOFTLIFE TENNIS
             </div>
 
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
@@ -74,13 +77,13 @@ const LandingTennis = () => {
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div>
                 <img 
-                  src="https://i.pinimg.com/736x/2f/80/6e/2f806e4e85146205ebbb995ef7999d15.jpg" 
+                  src={founder}
                   alt="Tennis Professional" 
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute bottom-6 left-6 z-20 text-white">
                   <p className="text-sm font-medium opacity-80">FEATURED COACH</p>
-                  <h3 className="text-xl font-bold">Alex Williams</h3>
+                  <h3 className="text-xl font-bold">Ashley Rose loft</h3>
                   <p className="text-sm opacity-90">Former ATP Top 50</p>
                 </div>
               </div>
@@ -92,7 +95,7 @@ const LandingTennis = () => {
                 }`}
               >
                 <img 
-                  src="https://i.pinimg.com/736x/c4/a1/fb/c4a1fbeec72be4f40a3af7f5a1a6cfbd.jpg" 
+                  src={coart}
                   alt="Tennis Court" 
                   className="w-full h-full object-cover"
                 />
