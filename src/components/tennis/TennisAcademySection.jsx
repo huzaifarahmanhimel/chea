@@ -2,7 +2,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, Clock } from 'lucide-react';
-import COART from '../images/COART.jpg';
 
 const TennisAcademySection = () => {
   const sectionVariants = {
