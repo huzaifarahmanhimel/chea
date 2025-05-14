@@ -64,7 +64,7 @@ export default function ServiceSection() {
   };
 
   return (
-    <section className="bg-stone-100c text-white py-24 px-6 md:px-10 lg:px-20 overflow-hidden">
+    <section className="bg-stone-100 text-white py-24 px-6 md:px-10 lg:px-20 overflow-hidden">
       <motion.div 
         className="max-w-7xl mx-auto"
         initial="hidden"
