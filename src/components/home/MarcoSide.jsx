@@ -120,24 +120,12 @@ export default function MarcoSlid() {
               className="text-slate-300 text-base sm:text-lg leading-relaxed" 
               variants={itemVariants}
             >
-              Experience the epitome of coastal luxury at MareSereno, where pristine Mediterranean 
+              Experience the epitome of coastal luxury at Chea, where pristine Mediterranean 
               views meet sophisticated design. Our exclusive beachfront accommodations redefine 
               relaxation with panoramic ocean vistas and unparalleled amenities.
             </motion.p>
 
-            <motion.div 
-              className="flex flex-wrap gap-4 sm:gap-6"
-              variants={itemVariants}
-            >
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-center gap-2 text-blue-300">
-                  <div className="bg-blue-500/20 p-1.5 sm:p-2 rounded-full">
-                    {feature.icon}
-                  </div>
-                  <span className="text-xs sm:text-sm font-medium">{feature.text}</span>
-                </div>
-              ))}
-            </motion.div>
+            
 
             <motion.div className="flex flex-wrap gap-3 sm:gap-4" variants={itemVariants}>
               <motion.button
