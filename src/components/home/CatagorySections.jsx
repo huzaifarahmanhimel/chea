@@ -76,7 +76,7 @@ export default function CategorySections() {
       </div>
       
       {/* Treatment Cards with Advanced Hover Effects */}
-      <div className="px-4 pb-24">
+      <div className="px-6 pb-24">
         <h2 className="text-center text-3xl md:text-4xl font-light tracking-wider mb-16 text-amber-100">
           EXPERIENCE <span className="font-bold">WELLNESS</span>
         </h2>
