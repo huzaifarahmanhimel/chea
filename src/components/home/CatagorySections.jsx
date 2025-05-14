@@ -76,7 +76,7 @@ export default function CategorySections() {
       
       {/* Treatment Cards with Advanced Hover Effects */}
         <div className="px-5 pb-6 mt-[-60px]">
-          <h2 className="text-center text-3xl md:text-4xl font-light tracking-wider mb-8 text-green-600">
+          <h2 className="text-center text-3xl md:text-4xl font-light tracking-wider mb-16 text-green-600">
             EXPERIENCE <span className="font-bold"> ALOFTY LIFE</span>
           </h2>
           
