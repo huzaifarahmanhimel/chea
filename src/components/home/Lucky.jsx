@@ -55,7 +55,7 @@ export default function Lucky() {
   };
 
   return (
-    <div className="relative w-full min-h-screen bg-black text-white overflow-hidden">
+    <div className="relative w-full min-h-screen bg-white text-white overflow-hidden">
       <div className="max-w-screen-2xl mx-auto px-4 md:px-8 lg:px-12">
         {/* Main Content Container */}
         <div className="flex flex-col md:flex-row min-h-screen">
