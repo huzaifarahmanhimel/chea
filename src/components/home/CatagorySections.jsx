@@ -75,13 +75,13 @@ export default function CategorySections() {
       </div>
       
       {/* Treatment Cards with Advanced Hover Effects */}
-      <div className="px-5 pb-6">
-        <h2 className="text-center text-3xl md:text-4xl font-light tracking-wider mb-8 text-green-600">
-          EXPERIENCE <span className="font-bold"> ALOFTY LIFE</span>
-        </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 max-w-6xl mx-auto">
-          {treatments.map((treatment, index) => {
+        <div className="px-5 pb-6 mt-[-60px]">
+          <h2 className="text-center text-3xl md:text-4xl font-light tracking-wider mb-8 text-green-600">
+            EXPERIENCE <span className="font-bold"> ALOFTY LIFE</span>
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 max-w-6xl mx-auto">
+            {treatments.map((treatment, index) => {
             const isHovered = hoveredIndex === index;
             const parallax = getParallaxOffset(index);
             
