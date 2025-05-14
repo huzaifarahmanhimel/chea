@@ -79,7 +79,7 @@ export default function ModernWellnessBlogSection() {
   };
 
   return (
-    <div className="bg-black text-white py-16 px-4 min-h-screen flex flex-col items-center justify-center overflow-hidden">
+    <div className="bg-white text-white py-16 px-4 min-h-screen flex flex-col items-center justify-center overflow-hidden">
       {/* Header Section with Animation */}
       <motion.div 
         className="text-center mb-16 w-full max-w-4xl mx-auto"
@@ -91,7 +91,7 @@ export default function ModernWellnessBlogSection() {
           className="text-4xl md:text-6xl font-serif mb-6 tracking-wide"
           variants={titleVariants}
         >
-          <span className="text-amber-500">TRUE</span> WELLNESS
+          <span className="text-green-500">TRUE</span> WELLNESS
         </motion.h1>
         
         <motion.div 
