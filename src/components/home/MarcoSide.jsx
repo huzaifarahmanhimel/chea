@@ -112,7 +112,7 @@ export default function MarcoSlid() {
                 Welcome to CHEA
               </span>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-2 sm:mt-3 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200">
-                Luxury  Living
+                Your Wellness Journey Starts Here
               </h1>
             </motion.div>
 
@@ -120,9 +120,11 @@ export default function MarcoSlid() {
               className="text-slate-300 text-base sm:text-lg leading-relaxed" 
               variants={itemVariants}
             >
-              Experience the epitome of coastal luxury at Chea, where pristine Mediterranean 
-              views meet sophisticated design. Our exclusive beachfront accommodations redefine 
-              relaxation with panoramic ocean vistas and unparalleled amenities.
+             Welcome to a space where wellness meets joy.
+             From nourishing meals to energizing movement and healing touch — we’re here to help you feel your best.
+             Explore, unwind, and transform your lifestyle with us.
+
+
             </motion.p>
 
             
