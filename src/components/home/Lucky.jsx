@@ -55,7 +55,7 @@ export default function Lucky() {
   };
 
   return (
-    <div className="relative w-full min-h-screen bg-white text-white overflow-hidden">
+    <div className="relative w-full min-h-screen bg-white text-black overflow-hidden">
       <div className="max-w-screen-2xl mx-auto px-4 md:px-8 lg:px-12">
         {/* Main Content Container */}
         <div className="flex flex-col md:flex-row min-h-screen">
@@ -144,7 +144,7 @@ export default function Lucky() {
               </motion.div>
               
               <motion.p 
-                className="text-gray-300 mb-8 font-light leading-relaxed"
+                className="text-black mb-8 font-light leading-relaxed"
                 variants={slideUp}
               >
                 Every treatment at Alofty Life is given by Ashley herself — combining deep knowledge of the body with intuitive touch. As a certified sports massage therapist and lifelong athlete, she understands how to release tension, restore energy, and help you feel whole again.
@@ -153,7 +153,7 @@ export default function Lucky() {
               <motion.div variants={slideUp}>
                 <motion.a
                   href="/treatments"
-                  className="inline-block border border-white px-8 py-3 text-sm tracking-wider transition-all duration-300 hover:bg-white hover:text-black"
+                  className="inline-block border border-white px-8 py-3 text-sm tracking-wider transition-all duration-300 hover:bg-black hover:text-white"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -167,12 +167,12 @@ export default function Lucky() {
                 variants={slideUp}
               >
                 <div className="border-l border-gray-700 pl-4">
-                  <h4 className="text-sm tracking-wider text-gray-400">NATURAL</h4>
-                  <p className="mt-1 text-white font-light">Only organic, skin-loving ingredients</p>
+                  <h4 className="text-sm tracking-wider text-black">NATURAL</h4>
+                  <p className="mt-1 text-black font-light">Only organic, skin-loving ingredients</p>
                 </div>
                 <div className="border-l border-gray-700 pl-4">
-                  <h4 className="text-sm tracking-wider text-gray-400">ONE-ON-ONE</h4>
-                  <p className="mt-1 text-white font-light">Always with Ashley – no substitutes</p>
+                  <h4 className="text-sm tracking-wider text-black">ONE-ON-ONE</h4>
+                  <p className="mt-1 text-black font-light">Always with Ashley – no substitutes</p>
                 </div>
               </motion.div>
             </div>
