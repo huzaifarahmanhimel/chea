@@ -111,7 +111,7 @@ export default function MarcoSlid() {
                 <span className="inline-block w-6 sm:w-8 h-px bg-blue-400 mr-2"></span>
                 Welcome to CHEA
               </span>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-2 sm:mt-3 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mt-2 sm:mt-3 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200">
                 Your Wellness Journey Starts Here
               </h1>
             </motion.div>
