@@ -10,35 +10,35 @@ export default function HeroSlider() {
 
   const slides = [
     {
-      title: "QUALITY FACE MASK",
-      subtitle: "FOR SENSITIVE SKIN",
-      description: "Restore your natural glow with organic ingredients",
-      image: "https://i.pinimg.com/736x/3f/e5/6a/3fe56a5134daad96cff2b2f90cb764aa.jpg",
-      altText: "Woman applying face mask in spa",
+      title: "MASSAGE THERAPY",
+      subtitle: "FOR RELAXATION",
+      description: "Experience the ultimate relaxation with our expert massage therapy",
+      image: "https://i.pinimg.com/736x/1d/80/8c/1d808cd741347505d1360954dfe09c1f.jpg",
+      altText: "Massage therapy session",
       color: "from-pink-500 to-purple-600"
     },
     {
-      title: "REJUVENATING TREATMENTS",
-      subtitle: "FOR NATURAL GLOW",
-      description: "Experience the power of science-backed skincare",
+      title: "HEALTHY FOOD",
+      subtitle: "FOR YOUR BODY",
+      description: "Nourish your body with our organic meal plans",
       image: "https://i.pinimg.com/736x/51/4d/91/514d917efa704572c873b8fad3e7b8d8.jpg",
-      altText: "Spa treatment session",
+      altText: "Healthy food platter",
       color: "from-blue-500 to-teal-400"
     },
     {
-      title: "AROMATHERAPY MASSAGE",
-      subtitle: "FOR DEEP RELAXATION",
-      description: "Sink into blissful relaxation with essential oils",
+      title: "TENNIS TRAINING",
+      subtitle: "FOR ALL LEVELS",
+      description: "Join our expert coaches for personalized training",
       image: "https://i.pinimg.com/736x/23/fd/b2/23fdb24fa698f254d5fb0a4b04e41b09.jpg",
-      altText: "Aromatherapy massage session",
+      altText: "Tennis training session",
       color: "from-purple-600 to-indigo-500"
     },
     {
-      title: "NATURAL INGREDIENTS",
-      subtitle: "FOR LASTING RESULTS",
-      description: "Sustainable beauty that works with your skin",
+      title: "WAKE & SHAKE",
+      subtitle: "FOR A BETTER DAY",
+      description: "Start your day with our energizing wake-up routine",
       image: "https://i.pinimg.com/736x/7b/6b/f4/7b6bf4e63b22e7e842f04a2f9916d33b.jpg",
-      altText: "Natural spa ingredients",
+      altText: "Wake and shake routine",
       color: "from-emerald-500 to-lime-400"
     }
   ];
