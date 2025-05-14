@@ -7,28 +7,28 @@ export default function FounderSection() {
   
   const features = [
     {
-      title: "Integrated Calendar",
-      description: "Sync tasks and deadlines with your team's calendar for clear, real-time planning.",
-      icon: "calendar"
+      title: "Tennis & Coaching",
+      description: "From court to confidence — Ashley has trained players of all levels with passion, fun and purpose.",
+      icon: "Tennis"
     },
     {
-      title: "File Sharing",
-      description: "Easily upload, share, and manage files in one secure, centralized space.",
-      icon: "share"
+      title: "Massage & Bodywork",
+      description: "Certified in sports massage, she blends technique with intuition to help you heal, recharge and feel your best..",
+      icon: "massage"
     },
     {
-      title: "Project Boards",
-      description: "Visualize your team's workflow with customizable Kanban-style boards.",
-      icon: "layout"
+      title: "Wake & Shake",
+      description: "Her signature morning movement ritual: music, breath and dance to boost your energy for the day ahead.",
+      icon: "dance"
     },
     {
-      title: "Role-Based Permissions",
-      description: "Control access levels and assign responsibilities to keep your projects secure.",
-      icon: "shield"
+      title: "Healthy Food Creation",
+      description: "Ashley crafts nourishing meals inspired by nature, color and balance — made to fuel both body and mind.",
+      icon: "food"
     },
     {
-      title: "Notes & Docs",
-      description: "Create and collaborate on meeting notes, briefs, and documents without leaving the app.",
+      title: "Heart & Soul",
+      description: "Alofty Life is more than a brand — it’s Ashley’s lifestyle, vision and full-time presence.You’re not just booking a service. You’re meeting her energy.",
       icon: "file-text"
     },
     {
@@ -166,15 +166,16 @@ export default function FounderSection() {
   };
 
   return (
-    <section ref={sectionRef} className="w-full bg-black py-24 px-4 md:px-8 overflow-hidden">
+    <section ref={sectionRef} className="w-full bg-white py-24 px-4 md:px-8 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-orange-200 mb-4">
-            Founder of Chea
+            Founder of Alofty Life
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            From task tracking to real-time updates, every tool is designed to boost collaboration, clarity, and team productivity.
+            Ashley isn’t just the face of Alofty Life — she is the experience.
+             Each session, class or meal is created and guided by her personally.
           </p>
         </div>
 
