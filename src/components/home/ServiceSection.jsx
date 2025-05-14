@@ -64,57 +64,73 @@ export default function ServiceSection() {
   };
 
   return (
-    <section className="bg-stone-100 text-white py-24 px-6 md:px-10 lg:px-20 overflow-hidden">
+    <section className="bg-white text-gray-800 py-24 px-6 md:px-10 lg:px-20 overflow-hidden">
       <motion.div 
         className="max-w-7xl mx-auto"
         initial="hidden"
         animate={visible ? "visible" : "hidden"}
         variants={containerVariants}
       >
+        <motion.h2 
+          className="text-4xl md:text-5xl font-bold mb-16 text-center"
+          variants={itemVariants}
+        >
+          Our <span className="text-green-600">Services</span>
+        </motion.h2>
+
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           variants={containerVariants}
         >
           {services.map((service) => (
             <motion.div
               key={service.id}
-              className="relative cursor-pointer group hover:scale-105 transition-all duration-500"
+              className="relative cursor-pointer group"
               onMouseEnter={() => setHovered(service.id)}
               onMouseLeave={() => setHovered(null)}
               variants={itemVariants}
             >
-              <div className="flex flex-col space-y-8 pb-6 pt-2 px-3 rounded-lg bg-gray-900 bg-opacity-40 backdrop-blur-sm hover:bg-opacity-60 transition-all duration-500">
-                <div className="relative mb-3">
-                  <motion.span 
-                    className="text-7xl md:text-8xl lg:text-9xl font-bold absolute top-0 left-0 -mt-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500"
+              <div className="flex flex-col h-full rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 bg-white border border-gray-100">
+                {/* Green accent bar at top */}
+                <div className="h-2 bg-green-500 w-full"></div>
+                
+                <div className="p-8 flex flex-col h-full">
+                  {/* Number */}
+                  <motion.div 
+                    className="text-6xl md:text-7xl font-bold mb-4 text-green-600"
                     animate={{ 
-                      opacity: hovered === service.id ? 0.7 : 0.4
+                      y: hovered === service.id ? -5 : 0,
+                      opacity: hovered === service.id ? 1 : 0.7 
                     }}
                     transition={{ duration: 0.5 }}
                   >
                     {service.number}
-                  </motion.span>
-                  <h3 className="text-sm md:text-base lg:text-lg uppercase tracking-widest relative z-10 font-medium mt-6 mb-2">
+                  </motion.div>
+                  
+                  {/* Service name */}
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900">
                     {service.name}
                   </h3>
+                  
+                  {/* Description */}
+                  <p className="text-base text-green-800 font-medium mb-4">
+                    {service.description}
+                  </p>
+                  
+                  {/* Detail */}
+                  <p className="text-sm text-gray-600 leading-relaxed flex-grow mb-6">
+                    {service.detail}
+                  </p>
+                  
+                  {/* Bottom line that animates on hover */}
                   <motion.div 
-                    className="h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 w-0 group-hover:w-full transition-all duration-500"
-                    animate={{ width: hovered === service.id ? '100%' : '0%' }}
+                    className="w-0 h-0.5 bg-green-500 self-start"
+                    animate={{ 
+                      width: hovered === service.id ? '100%' : '0%'
+                    }}
                     transition={{ duration: 0.5 }}
                   />
-                  <p className="text-sm text-gray-400 mt-3">{service.description}</p>
                 </div>
-                
-                <p className="text-sm text-gray-300 leading-relaxed">{service.detail}</p>
-                
-                <motion.div 
-                  className="w-full h-px bg-gray-800 mt-auto"
-                  animate={{ 
-                    backgroundColor: hovered === service.id ? '#6366f1' : '#1f2937',
-                    height: hovered === service.id ? '2px' : '1px'
-                  }}
-                  transition={{ duration: 0.3 }}
-                />
               </div>
             </motion.div>
           ))}
