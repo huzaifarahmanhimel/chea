@@ -111,13 +111,13 @@ export default function MarcoSlid() {
                 <span className="inline-block w-6 sm:w-8 h-px bg-green-500 mr-2"></span>
                Welcome to Alofty Life
               </span>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mt-2 sm:mt-3 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mt-2 sm:mt-3 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-black to-blue-200">
                Where energy, balance, and joy come together.
               </h1>
             </motion.div>
 
             <motion.p 
-              className="text-slate-300 text-base sm:text-lg leading-relaxed" 
+              className="text-black text-base sm:text-lg leading-relaxed" 
               variants={itemVariants}
             >
             At Alofty Life, everything is rooted in movement, healing, and nourishment — the three pillars of your well-being. Whether you’re stepping onto the tennis court, diving into a plant-powered bowl, or letting go with a deep tissue massage, you’re invited into a lifestyle that reconnects you with yourself.
@@ -125,7 +125,7 @@ export default function MarcoSlid() {
 
             </motion.p>
             <motion.p 
-              className="text-slate-300 text-base sm:text-lg leading-relaxed" 
+              className="text-black text-base sm:text-lg leading-relaxed" 
               variants={itemVariants}
             >
             This is your space to reset, recharge, and rise into your full potential.
@@ -133,7 +133,7 @@ export default function MarcoSlid() {
 
             </motion.p>
             <motion.p 
-              className="text-slate-300 text-base sm:text-lg leading-relaxed" 
+              className="text-black text-base sm:text-lg leading-relaxed" 
               variants={itemVariants}
             >
             Feel strong. Feel vibrant. Feel alive.
@@ -145,7 +145,7 @@ export default function MarcoSlid() {
 
             <motion.div className="flex flex-wrap gap-3 sm:gap-4" variants={itemVariants}>
               <motion.button
-                className="group bg-gradient-to-r from-blue-600 to-blue-500 text-white py-2.5 sm:py-3 px-5 sm:px-6 rounded-lg flex items-center gap-2 shadow-lg shadow-blue-500/20 text-sm sm:text-base"
+                className="group bg-gradient-to-r from-green-400 to-green-500 text-neutral-950 py-2.5 sm:py-3 px-5 sm:px-6 rounded-lg flex items-center gap-2 shadow-lg shadow-blue-500/20 text-sm sm:text-base"
                 whileHover={{ scale: 1.03, boxShadow: "0 10px 25px -5px rgba(59, 130, 246, 0.3)" }}
                 whileTap={{ scale: 0.97 }}
               >
@@ -154,7 +154,7 @@ export default function MarcoSlid() {
               </motion.button>
               
               <motion.button
-                className="group text-white py-2.5 sm:py-3 px-5 sm:px-6 rounded-lg border border-white/20 hover:bg-white/5 flex items-center gap-2 transition-all duration-300 text-sm sm:text-base"
+                className="group text-black py-2.5 sm:py-3 px-5 sm:px-6 rounded-lg border border-white/20 hover:bg-white/5 flex items-center gap-2 transition-all duration-300 text-sm sm:text-base"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >
