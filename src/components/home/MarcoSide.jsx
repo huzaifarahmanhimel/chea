@@ -81,7 +81,7 @@ export default function MarcoSlid() {
   ];
 
   return (
-    <div className="bg-black text-white min-h-screen w-full flex items-center py-10 sm:py-12 lg:py-16 px-4 sm:px-8 lg:px-16 overflow-hidden">
+    <div className="bg-stone-100 text-white min-h-screen w-full flex items-center py-10 sm:py-12 lg:py-16 px-4 sm:px-8 lg:px-16 overflow-hidden">
       <div className="max-w-7xl mx-auto w-full relative" ref={contentRef}>
         {/* Background accent */}
         <motion.div 
@@ -108,11 +108,11 @@ export default function MarcoSlid() {
           >
             <motion.div variants={itemVariants}>
               <span className="text-blue-400 font-medium tracking-wider text-xs sm:text-sm uppercase flex items-center">
-                <span className="inline-block w-6 sm:w-8 h-px bg-blue-400 mr-2"></span>
-                Welcome to CHEA
+                <span className="inline-block w-6 sm:w-8 h-px bg-green-500 mr-2"></span>
+               Welcome to Alofty Life
               </span>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mt-2 sm:mt-3 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200">
-                Your Wellness Journey Starts Here
+               Where energy, balance, and joy come together.
               </h1>
             </motion.div>
 
@@ -120,9 +120,23 @@ export default function MarcoSlid() {
               className="text-slate-300 text-base sm:text-lg leading-relaxed" 
               variants={itemVariants}
             >
-             Welcome to a space where wellness meets joy.
-             From nourishing meals to energizing movement and healing touch — we’re here to help you feel your best.
-             Explore, unwind, and transform your lifestyle with us.
+            At Alofty Life, everything is rooted in movement, healing, and nourishment — the three pillars of your well-being. Whether you’re stepping onto the tennis court, diving into a plant-powered bowl, or letting go with a deep tissue massage, you’re invited into a lifestyle that reconnects you with yourself.
+
+
+            </motion.p>
+            <motion.p 
+              className="text-slate-300 text-base sm:text-lg leading-relaxed" 
+              variants={itemVariants}
+            >
+            This is your space to reset, recharge, and rise into your full potential.
+
+
+            </motion.p>
+            <motion.p 
+              className="text-slate-300 text-base sm:text-lg leading-relaxed" 
+              variants={itemVariants}
+            >
+            Feel strong. Feel vibrant. Feel alive.
 
 
             </motion.p>
@@ -135,7 +149,7 @@ export default function MarcoSlid() {
                 whileHover={{ scale: 1.03, boxShadow: "0 10px 25px -5px rgba(59, 130, 246, 0.3)" }}
                 whileTap={{ scale: 0.97 }}
               >
-                Book Now
+               Start Your Journey
                 <ArrowRight className="group-hover:translate-x-1 transition-transform duration-300" size={windowSize.width < 640 ? 16 : 18} />
               </motion.button>
               
@@ -144,7 +158,7 @@ export default function MarcoSlid() {
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >
-                Explore More
+                See What’s Possible
                 <ChevronRight className="group-hover:translate-x-1 transition-transform duration-300" size={windowSize.width < 640 ? 16 : 18} />
               </motion.button>
             </motion.div>
