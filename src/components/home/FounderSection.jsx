@@ -129,7 +129,7 @@ export default function FounderSection() {
               <p className="text-gray-400 text-right">{feature.description}</p>
             </div>
             <div className="mx-4 flex-shrink-0">
-              <div className="bg-orange-200 rounded-full p-3 w-12 h-12 flex items-center justify-center text-white">
+              <div className="bg-green-400 rounded-full p-3 w-12 h-12 flex items-center justify-center text-white">
                 {renderIcon(feature.icon)}
               </div>
             </div>
@@ -170,10 +170,10 @@ export default function FounderSection() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-orange-200 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-green-500 mb-4">
             Founder of Alofty Life
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          <p className="text-black max-w-2xl mx-auto text-lg">
             Ashley isn’t just the face of Alofty Life — she is the experience.
              Each session, class or meal is created and guided by her personally.
           </p>
