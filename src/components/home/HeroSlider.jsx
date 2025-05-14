@@ -11,35 +11,35 @@ export default function HeroSlider() {
   const slides = [
     {
       title: "MASSAGE THERAPY",
-      subtitle: "FOR RELAXATION",
-      description: "Experience the ultimate relaxation with our expert massage therapy",
+      subtitle: "Feel Deeply. Restore Fully.",
+      description: "Experience the healing power of touch through Ashley’s holistic massage therapy – where body and mind reconnect.",
       image: "https://i.pinimg.com/736x/1d/80/8c/1d808cd741347505d1360954dfe09c1f.jpg",
       altText: "Massage therapy session",
       
     },
     {
       title: "HEALTHY FOOD",
-      subtitle: "FOR YOUR BODY",
-      description: "Nourish your body with our organic meal plans",
+      subtitle: "Nourish Your Body, Empower Your Energy.",
+      description: "Discover vibrant, nature-inspired meals made to fuel your body and soul – fresh, organic and made with love.",
       image: "https://i.pinimg.com/736x/51/4d/91/514d917efa704572c873b8fad3e7b8d8.jpg",
       altText: "Healthy food platter",
-      color: "from-blue-500 to-teal-400"
+     
     },
     {
       title: "TENNIS TRAINING",
-      subtitle: "FOR ALL LEVELS",
-      description: "Join our expert coaches for personalized training",
+      subtitle: "Move with Power. Play with Passion.",
+      description: "Join Ashley on the court – whether you’re a beginner or a pro, her personal coaching brings fun, flow and progress.",
       image: "https://i.pinimg.com/736x/23/fd/b2/23fdb24fa698f254d5fb0a4b04e41b09.jpg",
       altText: "Tennis training session",
-      color: "from-purple-600 to-indigo-500"
+      
     },
     {
       title: "WAKE & SHAKE",
-      subtitle: "FOR A BETTER DAY",
-      description: "Start your day with our energizing wake-up routine",
+      subtitle: "Start Strong. Stay Energized.",
+      description: "Awaken your body and spirit with dynamic morning routines combining movement, rhythm and breath.",
       image: "https://i.pinimg.com/736x/7b/6b/f4/7b6bf4e63b22e7e842f04a2f9916d33b.jpg",
       altText: "Wake and shake routine",
-      color: "from-emerald-500 to-lime-400"
+     
     }
   ];
 
