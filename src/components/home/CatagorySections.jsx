@@ -26,35 +26,35 @@ export default function CategorySections() {
     {
       id: 1,
       title: "HEALTHY FOOD",
-      description: "Organic cuisine to nourish your body and mind",
+      description: "Wholesome meals made from real, natural ingredients.",
       image: "https://i.pinimg.com/736x/b5/22/66/b522663d26df9fadb7039414d18de816.jpg",
-      link: "/treatments"
+      link: "/FoodBusiness"
     },
     {
       id: 2,
-      title: "THERMAL BATH",
-      description: "Rejuvenate in our mineral-rich therapeutic waters",
+      title: "BODYWORK & MASSAGE",
+      description: "Relax your body. Rebalance your energy.",
       image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-      link: "/thermal-bath"
+      link: "/MassageParlour"
     },
     {
       id: 3,
       title: "TENNIS",
-      description: "World-class courts with professional coaching",
+      description: "Fun, focused coaching for every age and level.",
       image: "https://i.pinimg.com/736x/44/0c/c1/440cc1811047b8b1dca036cf6215cfc3.jpg",
-      link: "/tennis"
+      link: "/tennisPage"
     },
     {
       id: 4,
-      title: "WELLNESS",
-      description: "Holistic programs to restore balance and vitality",
+      title: "WAKE & SHAKE",
+      description: "Morning energy through movement, music, and flow.",
       image: "https://i.pinimg.com/736x/4f/f7/49/4ff7499d2118fbe425973ad79d13d4eb.jpg",
-      link: "/wellness"
+      link: "/DancingPages"
     }
   ];
   
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div className="bg-stone-100 text-white min-h-screen">
       {/* Hero Quote Section with Parallax */}
       <div 
         className="w-full relative overflow-hidden py-24 flex items-center justify-center"
@@ -67,9 +67,7 @@ export default function CategorySections() {
         <div className="max-w-3xl text-center relative z-20 px-4">
           <div className="text-5xl font-serif mb-4 text-amber-300">"</div>
           <p className="text-xl md:text-2xl italic text-amber-100 font-light leading-relaxed">
-            Indulge in moments of pure tranquility and wellness,
-            <br />where luxury meets holistic rejuvenation,
-            <br />creating unforgettable experiences for mind, body, and soul.
+            A handpicked selection of what makes your body, mind, and energy thrive.
           </p>
           <div className="text-5xl font-serif mt-4 text-amber-300">"</div>
         </div>
@@ -78,7 +76,7 @@ export default function CategorySections() {
       {/* Treatment Cards with Advanced Hover Effects */}
       <div className="px-11 pb-24">
         <h2 className="text-center text-3xl md:text-4xl font-light tracking-wider mb-16 text-amber-100">
-          EXPERIENCE <span className="font-bold">WELLNESS</span>
+          EXPERIENCE <span className="font-bold"> ALOFTY LIFE</span>
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 max-w-6xl mx-auto">
