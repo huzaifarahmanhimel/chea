@@ -125,8 +125,8 @@ export default function FounderSection() {
         {alignment === 'left' && (
           <>
             <div className="flex-1">
-              <h3 className="text-xl font-semibold text-white mb-2 text-right">{feature.title}</h3>
-              <p className="text-gray-400 text-right">{feature.description}</p>
+              <h3 className="text-xl font-semibold text-green-300 mb-2 text-right">{feature.title}</h3>
+              <p className="text-black text-right">{feature.description}</p>
             </div>
             <div className="mx-4 flex-shrink-0">
               <div className="bg-green-400 rounded-full p-3 w-12 h-12 flex items-center justify-center text-black">
@@ -144,8 +144,8 @@ export default function FounderSection() {
               </div>
             </div>
             <div className="flex-1">
-              <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-              <p className="text-gray-400">{feature.description}</p>
+              <h3 className="text-xl font-semibold text-green-300 mb-2">{feature.title}</h3>
+              <p className="text-black">{feature.description}</p>
             </div>
           </>
         )}
@@ -153,12 +153,12 @@ export default function FounderSection() {
         {alignment === 'center' && (
           <div className="text-center w-full">
             <div className="flex justify-center mb-3">
-              <div className="bg-orange-200 rounded-full p-3 w-12 h-12 flex items-center justify-center text-white">
+              <div className="bg-green-400 rounded-full p-3 w-12 h-12 flex items-center justify-center text-black">
                 {renderIcon(feature.icon)}
               </div>
             </div>
-            <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-            <p className="text-gray-400 max-w-sm mx-auto">{feature.description}</p>
+            <h3 className="text-xl font-semibold text-green-300 mb-2">{feature.title}</h3>
+            <p className="text-black max-w-sm mx-auto">{feature.description}</p>
           </div>
         )}
       </div>
