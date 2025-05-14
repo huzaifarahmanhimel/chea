@@ -15,7 +15,7 @@ export default function HeroSlider() {
       description: "Experience the ultimate relaxation with our expert massage therapy",
       image: "https://i.pinimg.com/736x/1d/80/8c/1d808cd741347505d1360954dfe09c1f.jpg",
       altText: "Massage therapy session",
-      color: "from-pink-500 to-purple-600"
+      
     },
     {
       title: "HEALTHY FOOD",
