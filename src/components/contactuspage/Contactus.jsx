@@ -47,7 +47,7 @@ export default function Contactus() {
   return (
     <div className="w-full bg-black relative overflow-hidden">
       {/* Diagonal divider */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gray-100 transform -skew-y-3 translate-y-16"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-white transform -skew-y-3 translate-y-16"></div>
 
       <div className="container mx-auto px-4 py-16 lg:py-24">
         <motion.div
