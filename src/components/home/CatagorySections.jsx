@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function CategorySections() {
   const [scrollY, setScrollY] = useState(0);
