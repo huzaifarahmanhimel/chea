@@ -18,7 +18,7 @@ export default function DancingHero() {
   const danceStyles = [
     {
       name: 'BALLET',
-      image: '/api/placeholder/800/1200',
+      image: 'https://i.pinimg.com/736x/1c/4f/8f/1c4f8f96f6815ccbf457bfe70ecf6cc6.jpg',
       choreographer: 'Daya Chitanis',
       choreographerImage: '/api/placeholder/100/100',
       color: 'from-rose-500/30 to-transparent'
@@ -50,14 +50,14 @@ export default function DancingHero() {
     >
       {/* Animated Background Gradient */}
         <motion.div 
-          className="absolute inset-0 bg-gradient-to-t from-white to-black opacity-70 z-10"
+          className="absolute inset-0 bg-gradient-to-t from-white to-amber-50 opacity-70 z-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.7 }}
           transition={{ duration: 1.2 }}
         />
         
         <motion.div 
-          className="absolute inset-0 bg-gradient-to-br from-white to-black z-0"
+          className="absolute inset-0 bg-gradient-to-br from-white to-amber-50 z-0"
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.6 }}
           transition={{ duration: 1.2 }}
