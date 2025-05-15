@@ -3,7 +3,7 @@ import { Play, Award, Calendar, Users, Dumbbell, Heart, ChevronRight } from 'luc
 import founder from '../images/IMG_8351.jpg';
 
 export default function TennisSuggestions() {
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(0)
   const [isVisible, setIsVisible] = useState({
     header: false,
     features: false,
