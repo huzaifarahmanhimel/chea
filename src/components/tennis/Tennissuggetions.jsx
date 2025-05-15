@@ -72,7 +72,7 @@ export default function TennisSuggestions() {
   }, []);
   
   return (
-    <div className="bg-gradient-to-b from-black to-gray-900 text-white w-full overflow-hidden">
+    <div className="bg-gradient-to-b from-white to-slate-300 text-white w-full overflow-hidden">
       {/* Main content with margin on both sides */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header - Animated */}
