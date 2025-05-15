@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import founderter from '../images/IMG_8531.jpg';
+import founderter from '../images/IMG_8351.jpg';
 
 export default function Lucky() {
   const [isMobile, setIsMobile] = useState(false);
