@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import founders from '../images/IMG_8531.jpg';
 
 export default function AboutUsSection() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -42,22 +43,18 @@ export default function AboutUsSection() {
         variants={containerVariants}
       >
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
-          {/* Video Section with Play Button Overlay */}
+          {/* Image Section with Play Button Overlay */}
           <motion.div 
             className="w-full lg:w-1/2 relative"
             variants={itemVariants}
           >
             <div className="aspect-[16/9] w-full rounded-2xl overflow-hidden shadow-xl bg-black">
-              <iframe
-                src={`https://www.youtube.com/embed/SYa8k550M6E${isPlaying ? '?autoplay=1' : ''}`}
-                title="Massage therapist providing treatment"
-                className="w-full h-full z-10"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-              
-              {/* Video Overlay with Play Button */}
+              <img
+                src={founders}
+                alt="Massage therapist providing treatment"
+                className="w-full h-full object-cover z-10"
+              />
+              {/* Image Overlay with Play Button */}
               <motion.div 
                 className="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer"
                 variants={overlayVariants}

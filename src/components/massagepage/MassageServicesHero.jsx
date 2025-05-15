@@ -35,7 +35,7 @@ const MassageServicesHero = () => {
         <div className={`max-w-2xl transition-all duration-1000 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
           {/* Subtle badge */}
           <div className="inline-block bg-white/80 backdrop-blur-sm px-4 py-1 rounded-full text-xs font-medium text-emerald-800 mb-6 transform transition-all hover:scale-105 duration-300">
-            Professional Therapeutic Services
+           Massage with Intention. Care that Connects.
           </div>
           
           {/* Main Heading with staggered animation */}
