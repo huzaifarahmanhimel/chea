@@ -1,175 +1,393 @@
 import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function DancingHero() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [showVideo, setShowVideo] = useState(false);
+  const [activeStyle, setActiveStyle] = useState('BALLET');
+  const [isMobile, setIsMobile] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    setIsLoaded(true);
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const openVideo = () => {
-    setShowVideo(true);
-  };
+  const danceStyles = [
+    {
+      name: 'BALLET',
+      image: '/api/placeholder/800/1200',
+      choreographer: 'Daya Chitanis',
+      choreographerImage: '/api/placeholder/100/100',
+      color: 'from-rose-500/30 to-transparent'
+    },
+    {
+      name: 'BREAKDANCE',
+      image: '/api/placeholder/800/1200',
+      choreographer: 'Mike Rodriguez',
+      choreographerImage: '/api/placeholder/100/100',
+      color: 'from-amber-500/30 to-transparent'
+    },
+    {
+      name: 'YOGA',
+      image: '/api/placeholder/800/1200',
+      choreographer: 'Emma Thompson',
+      choreographerImage: '/api/placeholder/100/100',
+      color: 'from-sky-500/30 to-transparent'
+    }
+  ];
 
-  const closeVideo = () => {
-    setShowVideo(false);
-  };
+  const currentStyle = danceStyles.find(style => style.name === activeStyle);
 
   return (
-    <div className="relative w-full h-screen bg-gray-100 overflow-hidden">
-      {/* Custom animation styles */}
-      <style dangerouslySetInnerHTML={{
-        __html: `
-          @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-          }
-          
-          @keyframes scaleIn {
-            from { transform: scale(0.95); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-          }
-          
-          .animate-fadeIn {
-            animation: fadeIn 0.3s ease-out forwards;
-          }
-          
-          .animate-scaleIn {
-            animation: scaleIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-          }
-          
-          .pt-56\\.25 {
-            padding-top: 56.25%;
-          }
-          
-          @keyframes ping {
-            75%, 100% {
-              transform: scale(1.5);
-              opacity: 0;
-            }
-          }
-          
-          .animate-ping {
-            animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
-          }
-          
-          @keyframes pulse {
-            0% {
-              box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
-            }
-            70% {
-              box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
-            }
-            100% {
-              box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-            }
-          }
-          
-          .pulse-animation {
-            animation: pulse 2s infinite;
-          }
-        `
-      }} />
-    
+    <motion.div 
+      className="relative w-full h-screen bg-zinc-900 text-white overflow-hidden"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
+      {/* Animated Background Gradient */}
+      <motion.div 
+        className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70 z-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.7 }}
+        transition={{ duration: 1.2 }}
+      />
       
-      {/* Background Image */}
-      <div className="absolute inset-0 w-full h-full bg-gray-900/20">
-        <div className={`w-full h-full transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
-          <img
-            src="https://i.pinimg.com/736x/dd/86/34/dd86341aaa095a0f6753536adce8e0a0.jpg"
-            alt="Dancer silhouette"
-            className="w-full h-full object-cover object-center grayscale"
-          />
-        </div>
-      </div>
+      <motion.div 
+        className={`absolute inset-0 bg-gradient-to-br ${currentStyle.color} z-0`}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.6 }}
+        transition={{ duration: 1.2 }}
+        key={currentStyle.name}
+      />
 
-      {/* Content Container */}
-      <div className="relative flex flex-col items-center justify-center w-full h-full px-4">
-        {/* Text Section */}
-        <div className="text-center">
-          <h1 className={`text-6xl md:text-8xl lg:text-9xl font-bold text-gray-900 mb-4 tracking-tight transition-all duration-1000 ${
-            isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-          }`}>
-            <div className="mb-4">LET'S</div>
-            <div className={`transition-all duration-1000 delay-300 ${
-              isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-            }`}>
-              DANCE
-            </div>
-          </h1>
-          
-       { /* Button Container */}
-                  <div className={`mt-6 transition-all duration-1000 delay-500 ${
-                    isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-                  }`}>
-                    <div className="flex flex-row items-center justify-center space-x-4">
-                      <button 
-                        onClick={() => alert('Learn More button clicked!')}
-                        className="bg-gray-800 text-white py-3 px-6 flex items-center hover:bg-gray-700 transition-all duration-300 group"
-                      >
-                        <span className="mr-2">Learn More</span>
-                        <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-                      </button>
-                      
-                      <button 
-                        onClick={openVideo}
-                        className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-all duration-300 hover:scale-110 cursor-pointer relative overflow-hidden group pulse-animation"
-                        aria-label="Play video"
-                      >
-                        {/* Play icon SVG */}
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" 
-                     className="w-5 h-5 text-gray-800 relative z-10 group-hover:scale-110 transition-transform duration-300 ml-0.5">
-                  <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
-                </svg>
-                
-                {/* Ripple effect */}
-                <span className="absolute inset-0 bg-white opacity-30 scale-0 group-hover:scale-150 transition-transform duration-700 rounded-full"></span>
-                
-                {/* Pulse animation */}
-                <span className="absolute inset-0 border-2 border-gray-300 rounded-full animate-ping opacity-0 group-hover:opacity-30"></span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-     
-
-      {/* Video Modal */}
-      {showVideo && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4 animate-fadeIn"
-          onClick={closeVideo}
+      {/* Navigation Bar */}
+      <motion.div 
+        className="absolute top-0 left-0 right-0 flex justify-between items-center px-8 py-6 z-20"
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+      >
+        {/* Logo */}
+        <motion.div 
+          className="flex items-center"
+          whileHover={{ scale: 1.05 }}
         >
-          <div 
-            className="relative w-full max-w-4xl bg-black rounded shadow-xl animate-scaleIn"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Close button */}
-            <button 
-              className="absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors"
-              onClick={closeVideo}
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-            
-            {/* Video container with aspect ratio */}
-            <div className="relative pt-56.25 h-0 overflow-hidden rounded">
-              <iframe 
-                className="absolute top-0 left-0 w-full h-full"
-                src="/api/placeholder/640/360"
-                title="Dance Performance"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
+          <div className="text-2xl font-bold tracking-tighter">
+            <span className="text-orange-200">TM</span>
+            <span className="text-white">DS</span>
           </div>
-        </div>
-      )}
-    </div>
+        </motion.div>
+
+        {/* Desktop Navigation */}
+        <motion.div className="hidden md:flex items-center gap-8">
+          {['Classes', 'About', 'Instructors', 'Schedule', 'Contact'].map((item, index) => (
+            <motion.a
+              key={item}
+              href="#"
+              className="text-sm font-medium hover:text-orange-200 transition-colors relative"
+              whileHover={{ scale: 1.05 }}
+              initial={{ y: -10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
+            >
+              {item}
+              <motion.div 
+                className="absolute -bottom-1 left-0 right-0 h-px bg-orange-200 scale-x-0 origin-left"
+                whileHover={{ scaleX: 1 }}
+                transition={{ duration: 0.3 }}
+              />
+            </motion.a>
+          ))}
+          <motion.button
+            className="ml-4 px-6 py-2 rounded-full bg-orange-200 text-zinc-900 text-sm font-medium hover:bg-orange-300 transition-colors"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8, duration: 0.5 }}
+          >
+            Join Now
+          </motion.button>
+        </motion.div>
+
+        {/* Mobile Menu Button */}
+        <motion.div 
+          className="md:hidden cursor-pointer z-50"
+          whileTap={{ scale: 0.9 }}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <div className="w-6 h-5 flex flex-col justify-between">
+            <motion.div 
+              className="w-full h-px bg-white" 
+              animate={{ 
+                rotate: isMenuOpen ? 45 : 0,
+                y: isMenuOpen ? 9 : 0
+              }}
+            />
+            <motion.div 
+              className="w-full h-px bg-white" 
+              animate={{ opacity: isMenuOpen ? 0 : 1 }}
+            />
+            <motion.div 
+              className="w-full h-px bg-white" 
+              animate={{ 
+                rotate: isMenuOpen ? -45 : 0,
+                y: isMenuOpen ? -9 : 0
+              }}
+            />
+          </div>
+        </motion.div>
+      </motion.div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div 
+            className="fixed inset-0 bg-zinc-900/95 z-40 flex flex-col justify-center items-center md:hidden"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+          >
+            {['Classes', 'About', 'Instructors', 'Schedule', 'Contact'].map((item, index) => (
+              <motion.a
+                key={item}
+                href="#"
+                className="text-xl font-medium my-3 hover:text-orange-200 transition-colors"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+                transition={{ delay: index * 0.1, duration: 0.3 }}
+                whileHover={{ scale: 1.1 }}
+              >
+                {item}
+              </motion.a>
+            ))}
+            <motion.button
+              className="mt-6 px-8 py-3 rounded-full bg-orange-200 text-zinc-900 text-base font-medium"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ delay: 0.5, duration: 0.3 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Join Now
+            </motion.button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Main Hero Content */}
+      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-6 md:px-16">
+        <motion.div 
+          className="max-w-5xl w-full flex flex-col md:flex-row items-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          {/* Left Content */}
+          <motion.div 
+            className="w-full md:w-1/2 pt-12 md:pt-0"
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+          >
+            <motion.h2 
+              className="text-sm uppercase tracking-widest text-orange-200 mb-2"
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+            >
+              Experience the Art
+            </motion.h2>
+            
+            <motion.h1 
+              className="text-4xl md:text-6xl font-bold leading-tight mb-6 max-w-md"
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+            >
+              Dance for us is not just an activity, it is a way of life.
+            </motion.h1>
+            
+            <motion.p 
+              className="text-zinc-300 max-w-md mb-8"
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.7, duration: 0.8 }}
+            >
+              Join our community of passionate dancers and experience the transformative power of movement. Classes for all levels and styles.
+            </motion.p>
+            
+            <motion.div 
+              className="flex flex-wrap gap-4 mb-10"
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.8, duration: 0.8 }}
+            >
+              <motion.button 
+                className="px-8 py-3 bg-orange-200 text-zinc-900 rounded-full font-medium text-sm hover:bg-orange-300 transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Get Started
+              </motion.button>
+              
+              <motion.button 
+                className="px-8 py-3 border border-white/30 rounded-full font-medium text-sm hover:bg-white/10 transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Watch Demo
+              </motion.button>
+            </motion.div>
+
+            {/* Contact */}
+            <motion.div 
+              className="flex items-center text-sm text-zinc-400"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1, duration: 0.8 }}
+            >
+              <span className="mr-2">Contact:</span>
+              <a href="tel:01503-414708" className="hover:text-orange-200 transition-colors">01503-414708</a>
+            </motion.div>
+          </motion.div>
+
+          {/* Right Content - Style Selector */}
+          <motion.div 
+            className="w-full md:w-1/2 mt-10 md:mt-0 flex flex-col items-center justify-center"
+            initial={{ x: 50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+          >
+            <motion.div 
+              className="relative w-full max-w-md aspect-[3/4] rounded-lg overflow-hidden shadow-2xl"
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.7, duration: 0.8 }}
+            >
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeStyle}
+                  className="absolute inset-0"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <img 
+                    src={currentStyle.image}
+                    alt={`${currentStyle.name} dancer`}
+                    className="w-full h-full object-cover"
+                  />
+                </motion.div>
+              </AnimatePresence>
+              
+              {/* Style Name Overlay */}
+              <motion.div 
+                className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6"
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.9, duration: 0.6 }}
+              >
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="text-xs uppercase tracking-wider text-orange-200 mb-1">Current Style</div>
+                    <div className="text-xl font-bold">{activeStyle}</div>
+                  </div>
+                  <div className="flex items-center">
+                    <img 
+                      src={currentStyle.choreographerImage}
+                      alt={currentStyle.choreographer}
+                      className="w-8 h-8 rounded-full object-cover mr-2"
+                    />
+                    <div className="text-xs">
+                      <div className="opacity-70">Choreographer</div>
+                      <div>{currentStyle.choreographer}</div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+
+            {/* Style Selector */}
+            <motion.div 
+              className="flex justify-center gap-4 mt-6"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1, duration: 0.8 }}
+            >
+              {danceStyles.map((style) => (
+                <motion.button
+                  key={style.name}
+                  className={`px-4 py-2 rounded-full text-xs font-medium transition-colors ${
+                    activeStyle === style.name 
+                      ? 'bg-orange-200 text-zinc-900' 
+                      : 'bg-white/10 hover:bg-white/20'
+                  }`}
+                  onClick={() => setActiveStyle(style.name)}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {style.name}
+                </motion.button>
+              ))}
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      </div>
+
+      {/* Social Media Links */}
+      <motion.div 
+        className="absolute bottom-8 right-8 z-30 flex gap-4"
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 1.2, duration: 0.6 }}
+      >
+        {['Instagram', 'Facebook', 'YouTube'].map((social, index) => (
+          <motion.a
+            key={social}
+            href="#"
+            className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-orange-200 hover:text-zinc-900 transition-colors"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.3 + index * 0.1, duration: 0.5 }}
+          >
+            <span className="text-xs">{social.charAt(0)}</span>
+          </motion.a>
+        ))}
+      </motion.div>
+
+      {/* Scroll Indicator */}
+      <motion.div 
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 flex flex-col items-center"
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 1.2, duration: 0.6 }}
+      >
+        <div className="text-xs uppercase tracking-wider mb-2 opacity-60">Scroll</div>
+        <motion.div 
+          className="w-px h-8 bg-white/40"
+          animate={{ 
+            scaleY: [1, 0.3, 1],
+            opacity: [0.7, 1, 0.7] 
+          }}
+          transition={{ 
+            repeat: Infinity,
+            duration: 1.5,
+            ease: "easeInOut" 
+          }}
+        />
+      </motion.div>
+    </motion.div>
   );
 }
