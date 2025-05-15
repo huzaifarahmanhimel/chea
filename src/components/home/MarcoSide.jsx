@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight, ChevronRight, Sun, Waves, Map } from 'lucide-react';
+import goobaby from '../images/goo.jpg'
 
 export default function MarcoSlid() {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
@@ -36,7 +37,7 @@ export default function MarcoSlid() {
 
   const images = [
     {
-      src: "https://i.pinimg.com/736x/59/5f/85/595f85d1b50b1e77f55c8447875ba368.jpg",
+      src:{goobaby},
       alt: "Palm trees against blue sky",
     },
     {

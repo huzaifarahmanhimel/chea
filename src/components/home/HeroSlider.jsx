@@ -14,7 +14,7 @@ export default function HeroSlider() {
       title: "MASSAGE THERAPY",
       subtitle: "Feel Deeply. Restore Fully.",
       description: "Experience the healing power of touch through Ashley’s holistic massage therapy – where body and mind reconnect.",
-      image: "https://i.pinimg.com/736x/32/a8/74/32a8741a8db98c7cd2afaad3079a1f51.jpg",
+      image: "https://i.pinimg.com/736x/b1/d2/a9/b1d2a9b6212ca19cdea63c1080af01fb.jpg",
       altText: "Massage therapy session",
       
     },
