@@ -91,7 +91,8 @@ export default function ModernWellnessBlogSection() {
           className="text-4xl md:text-6xl font-serif mb-6 tracking-wide"
           variants={titleVariants}
         >
-          <span className="text-green-500">TRUE</span> WELLNESS
+          <span className="text-green-500">TRUE</span > <span className="text-black">WELLNESS</span>
+         
         </motion.h1>
         
         <motion.div 
