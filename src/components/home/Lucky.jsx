@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import founderter from '../images/IMG_8531.jpg';
 
 export default function Lucky() {
   const [isMobile, setIsMobile] = useState(false);
@@ -72,7 +73,7 @@ export default function Lucky() {
               <motion.div
                 className="absolute inset-0 bg-cover bg-center"
                 style={{
-                  backgroundImage: "url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')"
+                  backgroundImage: `url(${founderter})`,
                 }}
                 initial={{ scale: 1.1 }}
                 animate={{ scale: 1 }}
