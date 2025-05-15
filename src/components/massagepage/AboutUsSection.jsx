@@ -5,7 +5,7 @@ import founders from '../images/IMG_8531.jpg';
 export default function AboutUsSection() {
   const [isPlaying, setIsPlaying] = useState(false);
   
-  // Animation variants
+  // Animation variantsG
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: { 
