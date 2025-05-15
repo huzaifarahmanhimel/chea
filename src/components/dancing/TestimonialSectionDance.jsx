@@ -132,7 +132,7 @@ export default function TestimonialSectionDance() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="py-20 bg-white overflow-hidden relative"
+      className="py-20 bg-amber-50 overflow-hidden relative"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
         <div className="flex flex-col lg:flex-row justify-between items-center">
