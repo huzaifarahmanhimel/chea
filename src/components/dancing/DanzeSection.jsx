@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import wakes from '../images/wakes.png';
 
 export default function DanzeSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -52,7 +53,7 @@ export default function DanzeSection() {
             DAN<br/>ZE
           </motion.div>
           <motion.img 
-            src="https://i.pinimg.com/736x/01/fc/bf/01fcbf5426eb18f5242a63783f5656b3.jpg"
+            src={wakes}
             alt="Dancer in black flowing fabric" 
             className="h-auto w-full max-w-md z-10 object-cover"
             initial={{ opacity: 0, x: -40 }}
