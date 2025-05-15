@@ -59,7 +59,7 @@ const TestimonialCard = ({ testimonial, isActive }) => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -50 }}
       transition={{ duration: 0.5 }}
-      className={`bg-gray-100 p-8 rounded-lg shadow-lg max-w-md mx-auto ${isActive ? 'block' : 'hidden md:block'}`}
+      className={`bg-amber-50 p-8 rounded-lg shadow-lg max-w-md mx-auto ${isActive ? 'block' : 'hidden md:block'}`}
     >
       <motion.div 
         initial={{ opacity: 0 }}
