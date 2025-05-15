@@ -98,7 +98,7 @@ export default function AboutUsSection() {
               className="text-4xl md:text-5xl font-bold mb-6 text-green-950 tracking-tight"
               variants={itemVariants}
             >
-              About Us
+             About Ashley
             </motion.h2>
             
             <motion.div 
@@ -106,18 +106,14 @@ export default function AboutUsSection() {
               variants={itemVariants}
             >
               <p className="text-gray-700 text-lg leading-relaxed">
-                After completing a voluntary social year, Sarah dedicated the next
-                decade to working in the social sector. With a passion for women's
-                well-being, she has now embarked on a journey of self-employment in
-                the women's health field.
+                Ashley is not only a certified sports massage therapist — she’s also a tennis coach, movement expert, and someone who truly understands how the body works and heals.
               </p>
               
               <p className="text-gray-700 text-lg leading-relaxed">
-                Specializing in massage techniques that not
-                only promote physical health but also aid in body contouring, Sarah is
-                committed to providing personalized services that enhance both
-                vitality and confidence. Her holistic approach to women's care is
-                designed to support each client's unique wellness journey.
+                
+                With every massage, she brings more than technique. She brings intention, presence, and care.
+
+                Each session is one-on-one and designed around you — no rush, no routines. Just pure, focused attention on your body’s unique needs. Whether you’re an athlete in recovery, a busy soul in need of rest, or simply looking for relief, Ashley is here to help you reconnect.
               </p>
             </motion.div>
             
@@ -131,7 +127,7 @@ export default function AboutUsSection() {
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
-                <span className="relative z-10">Learn more</span>
+                <span className="relative z-10">Learn More About My Work</span>
                 <motion.span 
                   className="absolute inset-0 bg-green-700"
                   initial={{ x: "-100%" }}
