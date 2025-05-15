@@ -3,26 +3,26 @@ import { motion } from 'framer-motion';
 
 const stats = [
   {
-    label: 'Branch In World',
-    value: '120+',
+    label: 'Personally delivered by Ashley',
+    value: '500+ Treatments',
     icon: '🌿',
     bg: 'https://source.unsplash.com/600x400/?branches,trees',
   },
   {
-    label: 'Satisfied Customers',
-    value: '70K+',
+    label: 'Because real care brings real results',
+    value: '95% Rebook Rate',
     icon: '🍃',
     bg: 'https://source.unsplash.com/600x400/?happy,people',
   },
   {
-    label: 'Personal Staff',
-    value: '40+',
+    label: 'No staff, no routine — just you & Ashley',
+    value: '100% Hands-On',
     icon: '🌱',
     bg: 'https://source.unsplash.com/600x400/?team,work',
   },
   {
-    label: 'Years Of Experience',
-    value: '12+',
+    label: 'In massage & recovery work',
+    value: '8+ Years’ Experience',
     icon: '🌾',
     bg: 'https://source.unsplash.com/600x400/?growth,nature',
   },
