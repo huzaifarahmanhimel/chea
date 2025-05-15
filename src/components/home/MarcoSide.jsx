@@ -37,7 +37,7 @@ export default function MarcoSlid() {
 
   const images = [
     {
-      src:{goobaby},
+      src: goobaby,
       alt: "Palm trees against blue sky",
     },
     {
