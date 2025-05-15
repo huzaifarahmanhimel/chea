@@ -109,23 +109,47 @@ export default function TennisSuggestions() {
             isVisible.features ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}
         >
-          {/* Left Features */}
+          /* Left Features */
           <div className="space-y-12">
             {[
               {
                 icon: <Award className="text-green-400" size={28} />,
-                title: "Premium Training Grounds",
-                description: "Access state-of-the-art courts and facilities designed for optimal performance and skill development"
+                title: (
+                  <>
+                    <span className="text-green-400">Premium Training Grounds </span>
+                  </>
+                ),
+                description: (
+                  <span className="text-slate-600">
+                    Access state-of-the-art courts and facilities designed for optimal performance and skill development
+                  </span>
+                )
               },
               {
                 icon: <Calendar className="text-green-400" size={28} />,
-                title: "Flexible Scheduling",
-                description: "Choose from morning, afternoon, or evening sessions to fit your busy lifestyle and commitments"
+                title: (
+                  <>
+                    <span className="text-green-400">Flexible Scheduling </span>
+                  </>
+                ),
+                description: (
+                  <span className="text-stone-700">
+                    Choose from morning, afternoon, or evening sessions to fit your busy lifestyle and commitments
+                  </span>
+                )
               },
               {
                 icon: <Users className="text-green-400" size={28} />,
-                title: "10 Professional Courts",
-                description: "Never wait for court time with our expansive facility featuring 10 professional-grade tennis courts"
+                title: (
+                  <>
+                    <span className="text-green-400">10 Professional Courts </span>
+                  </>
+                ),
+                description: (
+                  <span className="text-stone-700">
+                    Never wait for court time with our expansive facility featuring 10 professional-grade tennis courts
+                  </span>
+                )
               }
             ].map((feature, index) => (
               <FeatureCard
@@ -138,7 +162,7 @@ export default function TennisSuggestions() {
               />
             ))}
           </div>
-          
+
           {/* Center - Tennis Player Image with hover effect */}
           <div className="flex justify-center items-center my-8 md:my-0">
             <div className="relative group">
@@ -196,9 +220,9 @@ export default function TennisSuggestions() {
           }`}
         >
           <div className="text-center mb-10">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">SEE OUR <span className="text-green-400">FACILITIES</span></h3>
+            <h3 className=" text-black text-2xl md:text-3xl font-bold mb-4">SEE OUR <span className="text-green-400">FACILITIES</span></h3>
             <div className="w-16 h-1 bg-green-400 mx-auto mb-6"></div>
-            <p className="text-gray-300 max-w-2xl mx-auto">Experience our world-class tennis facilities and get a glimpse of what training with us looks like</p>
+            <p className="text-stone-500 max-w-2xl mx-auto">Experience our world-class tennis facilities and get a glimpse of what training with us looks like</p>
           </div>
           
           <div className="relative w-full max-w-4xl mx-auto group">
@@ -216,24 +240,24 @@ export default function TennisSuggestions() {
         </div>
 
         {/* Satisfaction Counter with Animation */}
-        <div 
-          ref={counterRef}
-          className={`text-center py-20 transform transition-all duration-1000 ${
-            isVisible.counter ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-          }`}
-        >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <StatCounter number={counter} label="SATISFIED STUDENTS" />
-            <StatCounter number={Math.floor(counter/10)} label="CERTIFIED COACHES" />
-            <StatCounter number={Math.floor(counter/40)} label="TENNIS COURTS" />
+          <div 
+            ref={counterRef}
+            className={`text-center py-20 transform transition-all duration-1000 ${
+              isVisible.counter ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+            }`}
+          >
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <StatCounter number={counter} label={<span className="text-black">SATISFIED STUDENTS</span>} />
+              <StatCounter number={Math.floor(counter/10)} label={<span className="text-black">CERTIFIED COACHES</span>} />
+              <StatCounter number={Math.floor(counter/40)} label={<span className="text-black">TENNIS COURTS</span>} />
+            </div>
+            
+            <p className="text-slate-600 mt-6 text-lg max-w-3xl mx-auto">
+              Experience world-class tennis instruction with <span className="text-green-400 font-semibold">highly-qualified trainers</span> specializing in all aspects of the game. Our <span className="text-blue-400 font-semibold">proven methodology</span> has transformed beginners into competitive players and helped advanced players reach <span className="text-yellow-400 font-semibold">new heights</span>.
+            </p>
           </div>
           
-          <p className="text-gray-300 mt-6 text-lg max-w-3xl mx-auto">
-            Experience world-class tennis instruction with highly-qualified trainers specializing in all aspects of the game. Our proven methodology has transformed beginners into competitive players and helped advanced players reach new heights.
-          </p>
-        </div>
-        
-        {/* Testimonials Section */}
+          {/* Testimonials Section */}
         <div 
           ref={testimonialRef}
           className={`pb-24 transform transition-all duration-1000 ${
@@ -241,7 +265,7 @@ export default function TennisSuggestions() {
           }`}
         >
           <div className="text-center mb-12">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">WHAT OUR <span className="text-green-400">STUDENTS SAY</span></h3>
+            <h3 className=" text-black text-2xl md:text-3xl font-bold mb-4">WHAT OUR <span className="text-green-400">STUDENTS SAY</span></h3>
             <div className="w-16 h-1 bg-green-400 mx-auto mb-6"></div>
           </div>
           
