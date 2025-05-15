@@ -43,7 +43,8 @@ export default function DancingHero() {
 
   return (
     <motion.div 
-      className="relative w-full h-screen bg-zinc-900 text-white overflow-hidden"
+      className="relative w-full h-screen"
+       style={{ backgroundColor: '#f0d2ba' }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}

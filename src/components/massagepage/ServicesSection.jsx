@@ -35,21 +35,21 @@ const services = [
     title: 'Massage Therapy',
     description: 'Experience therapeutic touch that releases tension, improves circulation, and promotes deep relaxation and healing.',
     icon: MassageIcon,
-    image: '/api/placeholder/400/300'
+    image: 'https://i.pinimg.com/736x/f6/c0/5f/f6c05f560df20d4d2d1ac55204251c49.jpg'
   },
   {
     id: 2,
     title: 'Aromatherapy',
     description: 'Immerse yourself in a sensory journey with our carefully curated essential oil blends that restore balance and enhance well-being.',
     icon: AromatherapyIcon,
-    image: '/api/placeholder/400/300'
+    image: 'https://i.pinimg.com/736x/c9/72/89/c97289b7bbe350bbaa9999ca4cc318ba.jpg'
   },
   {
     id: 3,
     title: 'Geothermal Spa',
     description: 'Discover our unique and thoughtfully designed space that provides a healing environment, while also connecting you to nature.',
     icon: SpaIcon,
-    image: '/api/placeholder/400/300'
+    image: 'https://i.pinimg.com/736x/c8/13/8d/c8138dd51f7c8647f850746ba0399939.jpg'
   }
 ];
 
@@ -114,8 +114,8 @@ const ServicesSection = () => {
 
   return (
     <div 
-      className="min-h-screen py-16 px-4 sm:px-6 lg:px-8" 
-      style={{ backgroundColor: '#f0d2ba' }}
+      className=" bg-slate-100 min-h-screen py-16 px-4 sm:px-6 lg:px-8" 
+  
     >
       <div className="max-w-6xl mx-auto">
         {/* Heading Section */}
