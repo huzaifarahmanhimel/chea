@@ -117,10 +117,10 @@ export default function ZaipurServices() {
           className="text-center mb-12"
         >
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Our Services
+            Our Services Reconnect You With Your Body
           </h1>
           <p className="text-teal-200 max-w-xl mx-auto">
-            Step into a world where luxury meets wellness. Our spa is meticulously curated to offer you an innovative experience that nourishes body, mind, and soul.
+            Deep relief, real relaxation, and grounded calm — inspired by nature, delivered by Ashley.
           </p>
         </motion.div>
 
