@@ -164,15 +164,7 @@ export default function TennisPricingSection() {
           >
             FLEXIBLE PRICING PLANS
           </motion.h1>
-          <motion.p 
-            className="max-w-3xl mx-auto text-gray-600 px-4 text-lg"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua
-          </motion.p>
+          
         </motion.div>
         
         {/* Pricing Cards */}

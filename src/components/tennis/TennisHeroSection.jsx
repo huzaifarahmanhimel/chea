@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Play, User } from 'lucide-react';
 import herosectionImg from '../images/IMG_6631.JPG';
 
-export default function TennisLandingSection() {
+export default function TennisLandingSection()  {
   return (
     <div className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Image with Zoom Effect */}

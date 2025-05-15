@@ -5,6 +5,7 @@ import kids from '../images/kids.jpg';
 import student from '../images/students.jpg';
 import little from '../images/little.jpg';
 import kidplayer from '../images/IMG_5331.jpg';
+import table from '../images/Table.jpg';
 
 const TennisSchoolLanding = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -71,7 +72,7 @@ const TennisSchoolLanding = () => {
           whileHover={hoverScale}
         >
           <img 
-            src="https://i.pinimg.com/736x/f3/66/7d/f3667d6854551f0a376b68ef2961d1e8.jpg" 
+            src={table} 
             alt="Tennis player serving" 
             className="w-full h-full object-cover"
           />
