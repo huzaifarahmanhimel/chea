@@ -89,7 +89,7 @@ export default function DancingHero() {
             </motion.h2>
             
             <motion.h1 
-              className="text-4xl md:text-6xl font-bold leading-tight mb-6 max-w-md"
+              className=" text-black text-4xl md:text-6xl font-bold leading-tight mb-6 max-w-md"
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.8 }}
