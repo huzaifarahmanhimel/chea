@@ -80,7 +80,7 @@ export default function DancingHero() {
             transition={{ delay: 0.3, duration: 0.8 }}
           >
             <motion.h2 
-              className="text-sm uppercase tracking-widest text-orange-200 mb-2"
+              className="text-sm uppercase tracking-widest text-slate-500 mb-2"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.6 }}
@@ -98,7 +98,7 @@ export default function DancingHero() {
             </motion.h1>
             
             <motion.p 
-              className="text-zinc-300 max-w-md mb-8"
+              className="text-slate-500 max-w-md mb-8"
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.7, duration: 0.8 }}
@@ -121,7 +121,7 @@ export default function DancingHero() {
               </motion.button>
               
               <motion.button 
-                className="px-8 py-3 border border-white/30 rounded-full font-medium text-sm hover:bg-white/10 transition-colors"
+                className="px-8 py-3  text-black border border-stone-600 rounded-full font-medium text-sm hover:bg-white/10 transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -255,9 +255,9 @@ export default function DancingHero() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.6 }}
       >
-        <div className="text-xs uppercase tracking-wider mb-2 opacity-60">Scroll</div>
+        <div className="text-slate-500 text-xs uppercase tracking-wider mb-2 opacity-60">Scroll</div>
         <motion.div 
-          className="w-px h-8 bg-white/40"
+          className="w-px h-8 bg-black"
           animate={{ 
             scaleY: [1, 0.3, 1],
             opacity: [0.7, 1, 0.7] 
