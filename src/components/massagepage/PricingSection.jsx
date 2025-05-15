@@ -5,9 +5,9 @@ const PricingPackages = () => {
   const [activeService, setActiveService] = useState('Spa & Massage');
   
   const serviceItems = [
-    { name: 'Face Masks', price: 47, description: 'Rejuvenating treatment for glowing skin' },
-    { name: 'Aroma Therapy', price: 47, description: 'Holistic healing through essential oils' },
-    { name: 'Face Scrubs', price: 47, description: 'Deep cleansing and exfoliation' },
+    { name: 'Relaxing Classical Massage', price: 47, description: 'Melt away everyday tension and reconnect with your inner calm' },
+    { name: 'Sports / Deep Tissue / Trigger Point Massage', price: 47, description: 'Target muscle tightness and promote faster recovery — ideal for active bodies.' },
+    { name: 'Scalp & Head Massage (included in all sessions)', price: 47, description: 'A deeply calming finale to every massage, easing stress and clearing your mind.' },
     { name: 'Rejuve Facial', price: 47, description: 'Complete skin renewal experience' }
   ];
 
@@ -24,10 +24,10 @@ const PricingPackages = () => {
             transition={{ duration: 0.9 }}
             className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
           >
-            Personalized Wellness Experiences
+            Natural Touch, Deep Relief — nature-inspired massages that restore, relax, and energize.
           </motion.h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Tailored treatments that meet your unique needs. Our spa offers a holistic approach to personal care and rejuvenation.
+            Each session is a personalized journey, combining classical relaxation, deep-tissue healing, and a soothing head massage to leave you grounded and renewed.
           </p>
         </div>
 
@@ -98,7 +98,7 @@ const PricingPackages = () => {
               whileTap={{ scale: 0.95 }}
               className="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-emerald-900 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-xl hover:bg-gray-900 transition-all duration-300"
             >
-              Book Your Experience
+              Feel the Difference — Book Now
             </motion.button>
           </motion.div>
         </div>
