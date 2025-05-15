@@ -86,7 +86,7 @@ export default function PricingSectionDance() {
   };
 
   return (
-    <div className="bg-white py-16 md:py-24 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto">
+    <div className="bg-amber-50 py-16 md:py-24 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto">
       <motion.div 
         className="text-center mb-16"
         initial="hidden"
