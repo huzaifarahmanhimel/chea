@@ -13,7 +13,7 @@ export default function DanceClassSection() {
       time: "6:00 AM",
       title: "DOORS OPEN!",
       description: "Ease your way in for your Movement Journey",
-      image: "/api/placeholder/300/300",
+      image: "https://i.pinimg.com/736x/4d/ea/3e/4dea3ef0dc969ea6c64bf098d7f5ae40.jpg",
       alt: "Alarm clock"
     },
     {
@@ -21,35 +21,35 @@ export default function DanceClassSection() {
       title: "WAKE UP THE BODY!",
       description: "Animal Flow/Yoga Movement to awaken the body",
       subtext: "Sound implemented with 'I FEEL' binaural frequency bath",
-      image: "/api/placeholder/300/300",
+      image: "https://i.pinimg.com/736x/ba/ae/ec/baaeec68b832306accecf0a9a9cbc34f.jpg",
       alt: "Person doing yoga"
     },
     {
       time: "6:15 AM",
       title: "DJ IS READY",
       description: "Moving, dancing, celebrating Life with 'Feel good electronic Dance music'",
-      image: "/api/placeholder/300/300",
+      image: "https://i.pinimg.com/736x/29/a9/ed/29a9edc227a43816d2b0012e5181d20d.jpg",
       alt: "DJ and dancers"
     },
     {
       time: "7:15 AM",
       title: "COOLDOWN",
       description: "Deep relaxation, conscious breathing implemented with 'I FEEL' binaural frequency bath",
-      image: "/api/placeholder/300/300",
+      image: "https://i.pinimg.com/736x/a5/02/67/a5026710c4dbc911b3541c511341015e.jpg",
       alt: "Person relaxing"
     },
     {
       time: "7:25 AM",
       title: "SHARE YOUR FEELINGS & SMILES",
       description: "Mingle with your Dancing Friends while enjoying Protein Shakes (available for Order)",
-      image: "/api/placeholder/300/300",
+      image: "https://i.pinimg.com/736x/0e/42/c8/0e42c83cb7cfae29d412d3bbc6ae53c7.jpg",
       alt: "Protein shake"
     },
     {
       time: "7:30 AM",
       title: "TIME TO CONQUER THE DAY",
       description: "Get to wherever place on this earth you are expected",
-      image: "/api/placeholder/300/300",
+      image: "https://i.pinimg.com/736x/5d/a0/61/5da061a79720840553ba5686e3bbcc90.jpg",
       alt: "Phone and coffee"
     }
   ];
