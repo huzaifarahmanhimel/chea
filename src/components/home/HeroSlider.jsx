@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, ShoppingCart, Star, Heart, Play } from 'lucide-react';
+import tennis from '../images/group.jpg';
 
 export default function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -13,7 +14,7 @@ export default function HeroSlider() {
       title: "MASSAGE THERAPY",
       subtitle: "Feel Deeply. Restore Fully.",
       description: "Experience the healing power of touch through Ashley’s holistic massage therapy – where body and mind reconnect.",
-      image: "https://i.pinimg.com/736x/1d/80/8c/1d808cd741347505d1360954dfe09c1f.jpg",
+      image: "https://i.pinimg.com/736x/32/a8/74/32a8741a8db98c7cd2afaad3079a1f51.jpg",
       altText: "Massage therapy session",
       
     },
@@ -29,7 +30,7 @@ export default function HeroSlider() {
       title: "TENNIS TRAINING",
       subtitle: "Move with Power. Play with Passion.",
       description: "Join Ashley on the court – whether you’re a beginner or a pro, her personal coaching brings fun, flow and progress.",
-      image: "https://i.pinimg.com/736x/23/fd/b2/23fdb24fa698f254d5fb0a4b04e41b09.jpg",
+      image: tennis,
       altText: "Tennis training session",
       
     },

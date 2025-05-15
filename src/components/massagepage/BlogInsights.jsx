@@ -95,9 +95,9 @@ export default function BlogInsights() {
             <motion.div 
               key={post.id}
               variants={itemVariants}
-              className=" bg-green-600 flex overflow-hidden rounded-full"
+              className=" flex overflow-hidden rounded-full"
             >
-              <div className={`${post.bgColor} text-white p-4 py-6 flex-grow rounded-l-full`}>
+              <div className={`bg-green-600 text-white p-4 py-6 flex-grow rounded-l-full`}>
                 <div className="pl-4 pr-2 max-w-md">
                   <h3 className="font-medium text-lg sm:text-xl mb-2">{post.title}</h3>
                   <div className="flex items-center text-xs text-gray-300">
