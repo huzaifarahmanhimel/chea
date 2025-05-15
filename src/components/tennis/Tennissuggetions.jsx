@@ -72,7 +72,7 @@ export default function TennisSuggestions() {
   }, []);
   
   return (
-    <div className="bg-gradient-to-b from-white to-slate-300 text-white w-full overflow-hidden">
+    <div className="bg-gradient-to-b from-white to-amber-50 text-white w-full overflow-hidden">
       {/* Main content with margin on both sides */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header - Animated */}
@@ -85,9 +85,9 @@ export default function TennisSuggestions() {
           <span className="inline-block px-4 py-1 rounded-full bg-green-400 bg-opacity-20 text-green-400 text-xs font-medium mb-4">
             ELITE TENNIS ACADEMY
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold tracking-wider mb-4">TRAINING FOR <span className="text-green-400">ANY AGE</span></h2>
+          <h2 className="text-black text-3xl md:text-5xl font-bold tracking-wider mb-4">TRAINING FOR <span className="text-green-400">ANY AGE</span></h2>
           <div className="w-16 h-1 bg-green-400 mx-auto mb-6"></div>
-          <p className="text-gray-300 text-lg mt-2 max-w-2xl mx-auto">
+          <p className="text-slate-500 text-lg mt-2 max-w-2xl mx-auto">
             Master professional tennis techniques and strategies designed for players of all skill levels and ages
           </p>
           
@@ -96,7 +96,7 @@ export default function TennisSuggestions() {
               <Play size={18} className="mr-2" />
               Start Training
             </button>
-            <button className="bg-transparent border border-white hover:border-green-400 hover:text-green-400 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300">
+            <button className="bg-black border border-black hover:border-green-400 hover:text-green-400 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300">
               Learn More
             </button>
           </div>
