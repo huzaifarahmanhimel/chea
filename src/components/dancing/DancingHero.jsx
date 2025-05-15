@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 export default function DancingHero() {
   const [activeStyle, setActiveStyle] = useState('BALLET');
   const [isMobile, setIsMobile] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -64,124 +63,6 @@ export default function DancingHero() {
         transition={{ duration: 1.2 }}
         key={currentStyle.name}
       />
-
-      {/* Navigation Bar */}
-      <motion.div 
-        className="absolute top-0 left-0 right-0 flex justify-between items-center px-8 py-6 z-20"
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.2, duration: 0.6 }}
-      >
-        {/* Logo */}
-        <motion.div 
-          className="flex items-center"
-          whileHover={{ scale: 1.05 }}
-        >
-          <div className="text-2xl font-bold tracking-tighter">
-            <span className="text-orange-200">TM</span>
-            <span className="text-white">DS</span>
-          </div>
-        </motion.div>
-
-        {/* Desktop Navigation */}
-        <motion.div className="hidden md:flex items-center gap-8">
-          {['Classes', 'About', 'Instructors', 'Schedule', 'Contact'].map((item, index) => (
-            <motion.a
-              key={item}
-              href="#"
-              className="text-sm font-medium hover:text-orange-200 transition-colors relative"
-              whileHover={{ scale: 1.05 }}
-              initial={{ y: -10, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
-            >
-              {item}
-              <motion.div 
-                className="absolute -bottom-1 left-0 right-0 h-px bg-orange-200 scale-x-0 origin-left"
-                whileHover={{ scaleX: 1 }}
-                transition={{ duration: 0.3 }}
-              />
-            </motion.a>
-          ))}
-          <motion.button
-            className="ml-4 px-6 py-2 rounded-full bg-orange-200 text-zinc-900 text-sm font-medium hover:bg-orange-300 transition-colors"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.8, duration: 0.5 }}
-          >
-            Join Now
-          </motion.button>
-        </motion.div>
-
-        {/* Mobile Menu Button */}
-        <motion.div 
-          className="md:hidden cursor-pointer z-50"
-          whileTap={{ scale: 0.9 }}
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          <div className="w-6 h-5 flex flex-col justify-between">
-            <motion.div 
-              className="w-full h-px bg-white" 
-              animate={{ 
-                rotate: isMenuOpen ? 45 : 0,
-                y: isMenuOpen ? 9 : 0
-              }}
-            />
-            <motion.div 
-              className="w-full h-px bg-white" 
-              animate={{ opacity: isMenuOpen ? 0 : 1 }}
-            />
-            <motion.div 
-              className="w-full h-px bg-white" 
-              animate={{ 
-                rotate: isMenuOpen ? -45 : 0,
-                y: isMenuOpen ? -9 : 0
-              }}
-            />
-          </div>
-        </motion.div>
-      </motion.div>
-
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMenuOpen && (
-          <motion.div 
-            className="fixed inset-0 bg-zinc-900/95 z-40 flex flex-col justify-center items-center md:hidden"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-          >
-            {['Classes', 'About', 'Instructors', 'Schedule', 'Contact'].map((item, index) => (
-              <motion.a
-                key={item}
-                href="#"
-                className="text-xl font-medium my-3 hover:text-orange-200 transition-colors"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 20 }}
-                transition={{ delay: index * 0.1, duration: 0.3 }}
-                whileHover={{ scale: 1.1 }}
-              >
-                {item}
-              </motion.a>
-            ))}
-            <motion.button
-              className="mt-6 px-8 py-3 rounded-full bg-orange-200 text-zinc-900 text-base font-medium"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 20 }}
-              transition={{ delay: 0.5, duration: 0.3 }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Join Now
-            </motion.button>
-          </motion.div>
-        )}
-      </AnimatePresence>
 
       {/* Main Hero Content */}
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-6 md:px-16">
