@@ -30,7 +30,7 @@ export default function FAQSection() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-amber-50 flex items-center justify-center p-4">
       <div className="max-w-6xl w-full mx-auto my-12 flex flex-col lg:flex-row gap-8 lg:gap-12">
         {/* Left side - Image and title */}
         <motion.div 
