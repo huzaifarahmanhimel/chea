@@ -82,10 +82,10 @@ export default function DanceClassSection() {
         transition={{ duration: 0.8 }}
         className="text-center mb-16"
       >
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-amber-400 mb-4">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4">
           YOUR DAY STARTS AT 6AM!
         </h1>
-        <p className="text-xl md:text-2xl text-amber-300 uppercase tracking-wider">
+        <p className="text-xl md:text-2xl text-black uppercase tracking-wider">
           THE EARLY BIRD CATCHES THE WORM
         </p>
       </motion.div>
