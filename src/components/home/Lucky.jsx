@@ -79,8 +79,7 @@ export default function Lucky() {
                 animate={{ scale: 1 }}
                 transition={{ duration: 1.5 }}
               >
-                {/* Frosted glass effect */}
-                <div className="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-sm"></div>
+               
               </motion.div>
               
               {/* Bath/Spa Element */}
@@ -111,19 +110,7 @@ export default function Lucky() {
                 </div>
               </motion.div>
               
-              {/* Plants overlay */}
-              <motion.div 
-                className="absolute top-0 right-0 bottom-0 w-1/3 opacity-60"
-                style={{
-                  backgroundImage: "url('https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80')",
-                  backgroundPosition: "center right",
-                  backgroundSize: "cover",
-                  mixBlendMode: "soft-light"
-                }}
-                initial={{ x: 50, opacity: 0 }}
-                animate={{ x: 0, opacity: 0.6 }}
-                transition={{ delay: 0.8, duration: 1 }}
-              ></motion.div>
+            
             </div>
           </motion.div>
           
