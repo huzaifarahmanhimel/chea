@@ -101,71 +101,71 @@ export default function MarcoSlid() {
         
         <div className="flex flex-col lg:flex-row justify-between items-center gap-8 sm:gap-12 lg:gap-16 relative z-10">
           {/* Text Content */}
-          <motion.div
-            className="w-full lg:w-1/2 space-y-6 sm:space-y-8"
-            variants={containerVariants}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-          >
-            <motion.div variants={itemVariants}>
-              <span className="text-green-500 font-medium tracking-wider text-xs sm:text-sm uppercase flex items-center">
-                <span className="inline-block w-6 sm:w-8 h-px bg-green-500 mr-2"></span>
-               Welcome to Alofty Life
-              </span>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-2 sm:mt-3 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-black to-green-200">
-               Where energy, balance, and joy come together.
-              </h1>
-            </motion.div>
+                <motion.div
+                className="w-full lg:w-1/2 space-y-6 sm:space-y-8"
+                variants={containerVariants}
+                initial="hidden"
+                animate={isInView ? "visible" : "hidden"}
+                >
+                <motion.div variants={itemVariants}>
+                  <span className="text-green-500 font-medium tracking-wider text-xs sm:text-sm uppercase flex items-center">
+                  <span className="inline-block w-6 sm:w-8 h-px bg-green-500 mr-2"></span>
+                   Welcome to Alofty Life
+                  </span>
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mt-2 sm:mt-3 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-black to-green-200">
+                   Where energy, balance, and joy come together.
+                  </h1>
+                </motion.div>
 
-            <motion.p 
-              className="text-black text-base sm:text-lg leading-relaxed" 
-              variants={itemVariants}
-            >
-            At Alofty Life, everything is rooted in movement, healing, and nourishment — the three pillars of your well-being. Whether you’re stepping onto the tennis court, diving into a plant-powered bowl, or letting go with a deep tissue massage, you’re invited into a lifestyle that reconnects you with yourself.
-
-
-            </motion.p>
-            <motion.p 
-              className="text-black text-base sm:text-lg leading-relaxed" 
-              variants={itemVariants}
-            >
-            This is your space to reset, recharge, and rise into your full potential.
+                <motion.p 
+                  className="text-black text-base sm:text-lg leading-relaxed" 
+                  variants={itemVariants}
+                >
+                At Alofty Life, everything is rooted in movement, healing, and nourishment — the three pillars of your well-being. Whether you’re stepping onto the tennis court, diving into a plant-powered bowl, or letting go with a deep tissue massage, you’re invited into a lifestyle that reconnects you with yourself.
 
 
-            </motion.p>
-            <motion.p 
-              className="text-black text-base sm:text-lg leading-relaxed" 
-              variants={itemVariants}
-            >
-            Feel strong. Feel vibrant. Feel alive.
+                </motion.p>
+                <motion.p 
+                  className="text-black text-base sm:text-lg leading-relaxed" 
+                  variants={itemVariants}
+                >
+                This is your space to reset, recharge, and rise into your full potential.
 
 
-            </motion.p>
+                </motion.p>
+                <motion.p 
+                  className="text-black text-base sm:text-lg leading-relaxed" 
+                  variants={itemVariants}
+                >
+                Feel strong. Feel vibrant. Feel alive.
 
-            
 
-            <motion.div className="flex flex-wrap gap-3 sm:gap-4" variants={itemVariants}>
-              <motion.button
-                className="group bg-gradient-to-r from-green-400 to-green-500 text-neutral-950 py-2.5 sm:py-3 px-5 sm:px-6 rounded-lg flex items-center gap-2 shadow-lg shadow-blue-500/20 text-sm sm:text-base"
-                whileHover={{ scale: 1.03, boxShadow: "0 10px 25px -5px rgba(59, 130, 246, 0.3)" }}
-                whileTap={{ scale: 0.97 }}
-              >
-               Start Your Journey
-                <ArrowRight className="group-hover:translate-x-1 transition-transform duration-300" size={windowSize.width < 640 ? 16 : 18} />
-              </motion.button>
-              
-              <motion.button
-                className="group text-black py-2.5 sm:py-3 px-5 sm:px-6 rounded-lg border border-white/20 hover:bg-white/5 flex items-center gap-2 transition-all duration-300 text-sm sm:text-base"
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-              >
-                See What’s Possible
-                <ChevronRight className="group-hover:translate-x-1 transition-transform duration-300" size={windowSize.width < 640 ? 16 : 18} />
-              </motion.button>
-            </motion.div>
-          </motion.div>
+                </motion.p>
 
-          {/* Image Gallery */}
+                
+
+                <motion.div className="flex flex-wrap gap-3 sm:gap-4" variants={itemVariants}>
+                  <motion.button
+                  className="group bg-gradient-to-r from-green-400 to-green-500 text-neutral-950 py-2.5 sm:py-3 px-5 sm:px-6 rounded-lg flex items-center gap-2 shadow-lg shadow-blue-500/20 text-sm sm:text-base"
+                  whileHover={{ scale: 1.03, boxShadow: "0 10px 25px -5px rgba(59, 130, 246, 0.3)" }}
+                  whileTap={{ scale: 0.97 }}
+                  >
+                   Start Your Journey
+                  <ArrowRight className="group-hover:translate-x-1 transition-transform duration-300" size={windowSize.width < 640 ? 16 : 18} />
+                  </motion.button>
+                  
+                  <motion.button
+                  className="group text-black py-2.5 sm:py-3 px-5 sm:px-6 rounded-lg border border-white/20 hover:bg-white/5 flex items-center gap-2 transition-all duration-300 text-sm sm:text-base"
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  >
+                  See What’s Possible
+                  <ChevronRight className="group-hover:translate-x-1 transition-transform duration-300" size={windowSize.width < 640 ? 16 : 18} />
+                  </motion.button>
+                </motion.div>
+                </motion.div>
+
+                {/* Image Gallery */}
           <motion.div
             className="w-full lg:w-1/2 h-64 sm:h-80 md:h-96 lg:h-[500px] relative overflow-visible"
             initial={{ opacity: 0, x: 50 }}
