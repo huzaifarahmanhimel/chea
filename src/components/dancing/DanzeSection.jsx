@@ -36,7 +36,7 @@ export default function DanzeSection() {
   ];
 
   return (
-    <div className="bg-white in-screen flex items-center justify-center py-12 px-4">
+    <div className="bg-amber-50 in-screen flex items-center justify-center py-12 px-4">
       <div className="max-w-6xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         {/* Left column with dancer image and brand name */}
         <motion.div 
