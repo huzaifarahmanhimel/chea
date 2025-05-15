@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import founders from '../images/IMG_8531.jpg';
+import founders from '../images/IMG_8351.jpg';
 
 export default function AboutUsSection() {
   const [isPlaying, setIsPlaying] = useState(false);
