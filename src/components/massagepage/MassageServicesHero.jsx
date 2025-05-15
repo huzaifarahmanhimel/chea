@@ -35,7 +35,7 @@ const MassageServicesHero = () => {
         <div className={`max-w-2xl transition-all duration-1000 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
           {/* Subtle badge */}
           <div className="inline-block bg-white/80 backdrop-blur-sm px-4 py-1 rounded-full text-xs font-medium text-emerald-800 mb-6 transform transition-all hover:scale-105 duration-300">
-           Massage with Intention. Care that Connects.
+          Massage with Intention. Care that Connects.
           </div>
           
           {/* Main Heading with staggered animation */}
@@ -50,7 +50,7 @@ const MassageServicesHero = () => {
           
           {/* Subheading */}
           <p className={`text-lg text-white/90 mb-8 max-w-xl transition-all duration-700 delay-500 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-            Expert techniques in Brazilian Lymphatic Drainage and Pregnancy Massages, tailored to your unique wellness needs.
+           Every treatment is delivered by Ashley — a certified sports massage therapist — blending intuition and technique to help your body recover, release, and reset.
           </p>
           
           {/* CTA Buttons */}
@@ -59,13 +59,13 @@ const MassageServicesHero = () => {
               href="/book-consultation" 
               className="inline-block bg-emerald-600 text-white font-medium px-6 py-3 rounded-full hover:bg-emerald-700 transition duration-300 ease-in-out text-center shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
-              Book a 15-min Consultation
+              Book a Session with Ashley
             </a>
             <a 
               href="/services" 
               className="inline-block bg-white/20 backdrop-blur-sm border border-white/30 text-white font-medium px-6 py-3 rounded-full hover:bg-white/30 transition duration-300 ease-in-out text-center"
             >
-              Explore Services
+              See Treatment Options
             </a>
           </div>
         </div>
