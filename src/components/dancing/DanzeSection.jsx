@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import wakes from '../images/wakes.png';
+import wakes from '../images/wakes.jpg';
 
 export default function DanzeSection() {
   const [isVisible, setIsVisible] = useState(false);
