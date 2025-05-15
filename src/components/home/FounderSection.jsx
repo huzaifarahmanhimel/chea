@@ -125,11 +125,11 @@ export default function FounderSection() {
         {alignment === 'left' && (
           <>
             <div className="flex-1">
-              <h3 className="text-xl font-semibold text-green-300 mb-2 text-right">{feature.title}</h3>
+              <h3 className="text-xl font-semibold text-green-600 mb-2 text-right">{feature.title}</h3>
               <p className="text-black text-right">{feature.description}</p>
             </div>
             <div className="mx-4 flex-shrink-0">
-              <div className="bg-green-400 rounded-full p-3 w-12 h-12 flex items-center justify-center text-black">
+              <div className="bg-green-600 rounded-full p-3 w-12 h-12 flex items-center justify-center">
                 {renderIcon(feature.icon)}
               </div>
             </div>
@@ -139,12 +139,12 @@ export default function FounderSection() {
         {alignment === 'right' && (
           <>
             <div className="mx-4 flex-shrink-0">
-              <div className="bg-green-500 rounded-full p-3 w-12 h-12 flex items-center justify-center text-black">
+              <div className="bg-green-600 rounded-full p-3 w-12 h-12 flex items-center justify-center">
                 {renderIcon(feature.icon)}
               </div>
             </div>
             <div className="flex-1">
-              <h3 className="text-xl font-semibold text-green-300 mb-2">{feature.title}</h3>
+              <h3 className="text-xl font-semibold text-green-600 mb-2">{feature.title}</h3>
               <p className="text-black">{feature.description}</p>
             </div>
           </>
@@ -153,11 +153,11 @@ export default function FounderSection() {
         {alignment === 'center' && (
           <div className="text-center w-full">
             <div className="flex justify-center mb-3">
-              <div className="bg-green-400 rounded-full p-3 w-12 h-12 flex items-center justify-center text-black">
+              <div className="bg-green-600 rounded-full p-3 w-12 h-12 flex items-center justify-center">
                 {renderIcon(feature.icon)}
               </div>
             </div>
-            <h3 className="text-xl font-semibold text-green-300 mb-2">{feature.title}</h3>
+            <h3 className="text-xl font-semibold text-green-600 mb-2">{feature.title}</h3>
             <p className="text-black max-w-sm mx-auto">{feature.description}</p>
           </div>
         )}
@@ -170,7 +170,7 @@ export default function FounderSection() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-green-500 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-green-600 mb-4">
             Founder of Alofty Life
           </h2>
           <p className="text-black max-w-2xl mx-auto text-lg">

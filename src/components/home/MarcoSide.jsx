@@ -108,8 +108,8 @@ export default function MarcoSlid() {
                 animate={isInView ? "visible" : "hidden"}
                 >
                 <motion.div variants={itemVariants}>
-                  <span className="text-green-500 font-medium tracking-wider text-xs sm:text-sm uppercase flex items-center">
-                  <span className="inline-block w-6 sm:w-8 h-px bg-green-500 mr-2"></span>
+                  <span className="text-green-600 font-medium tracking-wider text-xs sm:text-sm uppercase flex items-center">
+                  <span className="inline-block w-6 sm:w-8 h-px bg-green-600 mr-2"></span>
                    Welcome to Alofty Life
                   </span>
                   <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mt-2 sm:mt-3 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-black to-green-200">
