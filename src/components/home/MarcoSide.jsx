@@ -112,7 +112,7 @@ export default function MarcoSlid() {
                 <span className="inline-block w-6 sm:w-8 h-px bg-green-500 mr-2"></span>
                Welcome to Alofty Life
               </span>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mt-2 sm:mt-3 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-black to-green-200">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-2 sm:mt-3 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-black to-green-200">
                Where energy, balance, and joy come together.
               </h1>
             </motion.div>
