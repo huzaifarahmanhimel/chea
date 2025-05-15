@@ -75,71 +75,72 @@ export default function CategorySections() {
       </div>
       
       {/* Treatment Cards with Advanced Hover Effects */}
-        <div className="px-11 pb-28 mt-[-60px]">
+        <div className="px-11 pb-28 mt-0">
           <h2 className="text-center text-3xl md:text-4xl font-light tracking-wider mb-16 text-green-600">
             EXPERIENCE <span className="font-bold"> ALOFTY LIFE</span>
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 max-w-6xl mx-auto">
             {treatments.map((treatment, index) => {
-            const isHovered = hoveredIndex === index;
-            const parallax = getParallaxOffset(index);
+              const isHovered = hoveredIndex === index;
+              const parallax = getParallaxOffset(index);
+              
+              return (
+          <a
+            key={treatment.id}
+            href={treatment.link}
+            className="group relative overflow-hidden rounded-lg block cursor-pointer h-80 md:h-96"
+            style={{
+              transform: `translateY(${parallax.y}px)`,
+              transition: 'all 0.6s cubic-bezier(0.33, 1, 0.68, 1)'
+            }}
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            {/* Image with Parallax Effect */}
+            <div 
+              className="absolute inset-0 w-full h-full transition-all duration-700 ease-out"
+              style={{
+                transform: `scale(${isHovered ? 1.1 : 1})`,
+              }}
+            >
+              <img
+                src={treatment.image}
+                alt={treatment.title}
+                className="w-full h-full object-cover"
+              />
+            </div>
             
-            return (
-              <a
-                key={treatment.id}
-                href={treatment.link}
-                className="group relative overflow-hidden rounded-lg block cursor-pointer h-80 md:h-96"
-                style={{
-                  transform: `translateY(${parallax.y}px)`,
-                  transition: 'all 0.6s cubic-bezier(0.33, 1, 0.68, 1)'
-                }}
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
-              >
-                {/* Image with Parallax Effect */}
-                <div 
-                  className="absolute inset-0 w-full h-full transition-all duration-700 ease-out"
-                  style={{
-                    transform: `scale(${isHovered ? 1.1 : 1})`,
-                  }}
-                >
-                  <img
-                    src={treatment.image}
-                    alt={treatment.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                
-                {/* Overlay Gradient */}
-                <div 
-                  className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90 transition-opacity duration-500"
-                  style={{ opacity: isHovered ? 1 : 0.7 }}
-                ></div>
-                
-                {/* Content */}
-                <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 transition-transform duration-500 ease-out" 
-                  style={{ transform: `translateY(${isHovered ? 0 : '10px'})` }}
-                >
-                  <h3 className="text-xl md:text-2xl tracking-wider font-light mb-2 transition-all duration-500">
-                    {treatment.title}
-                  </h3>
-                  
-                  <p className="text-sm md:text-base text-amber-100 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
-                    {treatment.description}
-                  </p>
-                  
-                  <div className="mt-4 overflow-hidden h-8">
-                    <span className="inline-block py-1 px-4 border border-amber-300 text-amber-300 text-xs uppercase tracking-wider transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
-                      Explore
-                    </span>
-                  </div>
-                </div>
-              </a>
-            );
-          })}
+            {/* Overlay Gradient */}
+            <div 
+              className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90 transition-opacity duration-500"
+              style={{ opacity: isHovered ? 1 : 0.7 }}
+            ></div>
+            
+            {/* Content */}
+            <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 transition-transform duration-500 ease-out" 
+              style={{ transform: `translateY(${isHovered ? 0 : '10px'})` }}
+            >
+              <h3 className="text-xl md:text-2xl tracking-wider font-light mb-2 transition-all duration-500">
+                {treatment.title}
+              </h3>
+              
+              <p className="text-sm md:text-base text-amber-100 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                {treatment.description}
+              </p>
+              
+              <div className="mt-4 overflow-hidden h-8">
+                <span className="inline-block py-1 px-4 border border-amber-300 text-amber-300 text-xs uppercase tracking-wider transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+            Explore
+                </span>
+              </div>
+            </div>
+          </a>
+              );
+            })}
+          </div>
         </div>
       </div>
-    </div>
+    
   );
 }
