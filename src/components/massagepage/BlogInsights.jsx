@@ -74,7 +74,6 @@ export default function BlogInsights() {
           <p className="uppercase tracking-wider text-gray-600 mb-2">LATEST INSIGHTS</p>
           <div className="flex justify-center items-center my-4">
             <div className="h-px bg-gray-400 w-16"></div>
-            <img src="/api/placeholder/20/20" alt="leaf icon" className="mx-2" />
             <div className="h-px bg-gray-400 w-16"></div>
           </div>
           <h2 className="text-3xl sm:text-4xl font-serif text-emerald-900 mb-3">
@@ -96,7 +95,7 @@ export default function BlogInsights() {
             <motion.div 
               key={post.id}
               variants={itemVariants}
-              className="flex overflow-hidden rounded-full"
+              className=" bg-green-600 flex overflow-hidden rounded-full"
             >
               <div className={`${post.bgColor} text-white p-4 py-6 flex-grow rounded-l-full`}>
                 <div className="pl-4 pr-2 max-w-md">
@@ -121,7 +120,7 @@ export default function BlogInsights() {
         
         <div className="flex justify-center mt-12">
           <motion.button 
-            className="border border-gray-400 text-gray-700 rounded-full px-8 py-2 hover:bg-emerald-900 hover:text-white hover:border-emerald-900 transition-colors"
+            className="border border-gray-400 text-gray-700 rounded-full px-8 py-2 hover:bg-green-600 hover:text-white hover:border-green-600 transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

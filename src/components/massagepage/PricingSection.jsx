@@ -38,7 +38,7 @@ const PricingPackages = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-emerald-800 rounded-2xl p-8 shadow-lg"
+            className="bg-green-600 rounded-2xl p-8 shadow-lg"
           >
             <div className="mb-8 flex flex-wrap gap-4 justify-center">
               {services.map((service) => (
