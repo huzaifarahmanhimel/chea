@@ -55,10 +55,10 @@ export default function TennisLandingSection() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="border border-white/30 text-white px-6 py-3 rounded-full font-semibold flex items-center space-x-2 hover:bg-white/10 transition-colors"
+              className="border border-stone-800 text-black px-6 py-3 rounded-full font-semibold flex items-center space-x-2 hover:bg-white/10 transition-colors"
             >
               <Play className="w-5 h-5 text-lime-400" />
-              <span>Watch Intro</span>
+              <span className='text-black'>Watch Intro</span>
             </motion.button>
           </div>
         </motion.div>
