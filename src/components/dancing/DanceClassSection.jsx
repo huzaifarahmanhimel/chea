@@ -83,7 +83,7 @@ export default function DanceClassSection() {
         className="text-center mb-16"
       >
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4">
-          YOUR DAY STARTS AT 6AM!
+          SET YOUR ALARM! <br />YOUR DAY STARTS AT 6AM!
         </h1>
         <p className="text-xl md:text-2xl text-black uppercase tracking-wider">
           THE EARLY BIRD CATCHES THE WORM
