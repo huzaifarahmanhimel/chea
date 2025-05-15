@@ -24,10 +24,10 @@ export default function PromotionalSection() {
         {/* Content Overlay */}
         <div className="absolute inset-0 z-20 flex flex-col items-center justify-center px-4 md:px-8">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-2 sm:mb-4">
-            Save 30% on your first Message
+            Enjoy 30% Off Your First Massage
           </h1>
           <p className="text-sm sm:text-base md:text-lg text-white text-center mb-4 sm:mb-8">
-            Reveal post-summer radiance with your first heyday facial.
+            Step into deep relaxation and natural renewal — your journey starts here.
           </p>
           <button 
             className={`bg-white text-gray-800 font-medium py-2 px-6 rounded transition-all ${
@@ -35,7 +35,7 @@ export default function PromotionalSection() {
             }`}
             onClick={() => console.log('Booking now')}
           >
-            Book Now
+          Book Your Session Now
           </button>
         </div>
       </div>
