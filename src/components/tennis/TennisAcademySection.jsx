@@ -2,9 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, Clock } from 'lucide-react';
-import group from '../images/group.jpg';
-import kids from '../images/kids.jpg';
-import student from '../images/students.jpg';
+
 
 
 const TennisAcademySection = () => {
@@ -36,7 +34,7 @@ const TennisAcademySection = () => {
       icon: <Users className="w-12 h-12 text-green-500" />,
       title: "Group and Team Lessons",
       description: "Improve your skills with our collaborative group and team tennis training programs.",
-      image: {group}
+      image: "https://i.pinimg.com/736x/95/99/91/95999186bb63ccda95d0b8e180a0d03b.jpg"
     },
     {
       icon: <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -46,13 +44,13 @@ const TennisAcademySection = () => {
       </svg>,
       title: "Tennis Academy",
       description: "Professional coaching and advanced training for tennis enthusiasts of all levels.",
-      image: {kids}
+      image: "https://i.pinimg.com/736x/70/d8/85/70d8851d82dbdf112314f58ff213828a.jpg"
     },
     {
       icon: <Clock className="w-12 h-12 text-yellow-500" />,
       title: "Tennis Court Rent",
       description: "Book high-quality tennis courts for practice, matches, or personal training.",
-      image: {student}
+      image: "https://i.pinimg.com/736x/86/0f/10/860f10ed6dbf854108f21bf24987db15.jpg"
     }
   ];
 
