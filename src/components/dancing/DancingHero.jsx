@@ -49,22 +49,22 @@ export default function DancingHero() {
       transition={{ duration: 0.8 }}
     >
       {/* Animated Background Gradient */}
-      <motion.div 
-        className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70 z-10"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.7 }}
-        transition={{ duration: 1.2 }}
-      />
-      
-      <motion.div 
-        className={`absolute inset-0 bg-gradient-to-br ${currentStyle.color} z-0`}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.6 }}
-        transition={{ duration: 1.2 }}
-        key={currentStyle.name}
-      />
+        <motion.div 
+          className="absolute inset-0 bg-gradient-to-t from-white to-black opacity-70 z-10"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.7 }}
+          transition={{ duration: 1.2 }}
+        />
+        
+        <motion.div 
+          className="absolute inset-0 bg-gradient-to-br from-white to-black z-0"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.6 }}
+          transition={{ duration: 1.2 }}
+          key={currentStyle.name}
+        />
 
-      {/* Main Hero Content */}
+        {/* Main Hero Content */}
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-6 md:px-16">
         <motion.div 
           className="max-w-5xl w-full flex flex-col md:flex-row items-center"
