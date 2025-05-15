@@ -19,7 +19,7 @@ export default function TennisLandingSection() {
         }}
         className="absolute inset-0 z-0"
       >
-        <div className="absolute inset-0 bg-black"></div>
+        <div className="absolute inset-0 bg-slate-50"></div>
        
       </motion.div>
 
@@ -32,13 +32,13 @@ export default function TennisLandingSection() {
           transition={{ duration: 0.8 }}
           className="text-white space-y-6"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+          <h1 className=" text-black text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
             Best Tennis <span className="text-lime-400">School &</span>
-            <br />
+            <br className='text-black' />
             Exclusive Club
           </h1>
           
-          <p className="text-gray-200 text-lg md:text-xl max-w-md">
+          <p className="text-black text-lg md:text-xl max-w-md">
             Unlock your potential with professional tennis training. Expert coaches, state-of-the-art facilities, and personalized programs for all skill levels.
           </p>
           
