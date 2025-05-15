@@ -181,38 +181,38 @@ export default function TennisSuggestions() {
           </div>
           
           {/* Right Features */}
-          <div className="space-y-12">
-            {[
-              {
-                icon: <Award className="text-green-400" size={28} />,
-                title: "Expert Coaches",
-                description: "Learn from certified instructors with competitive experience and proven teaching methodologies"
-              },
-              {
-                icon: <Dumbbell className="text-green-400" size={28} />,
-                title: "Pro Tennis Shop",
-                description: "Access quality equipment, apparel, and accessories from leading brands at our on-site pro shop"
-              },
-              {
-                icon: <Heart className="text-green-400" size={28} />,
-                title: "Fitness Center",
-                description: "Complement your tennis training with specialized fitness programs designed for tennis athletes"
-              }
-            ].map((feature, index) => (
-              <FeatureCard
-                key={`right-${index}`}
-                icon={feature.icon}
-                title={feature.title}
-                description={feature.description}
-                isRightAligned={true}
-                delay={index * 0.2}
-                isVisible={isVisible.features}
-              />
-            ))}
-          </div>
-        </div>
-        
-        {/* Tennis Video Section with Animation */}
+                <div className="space-y-12">
+                {[
+                  {
+                  icon: <Award className="text-green-400" size={28} />,
+                  title: <span className="text-green-400">Expert Coaches</span>,
+                  description: <span className="text-slate-600">Learn from certified instructors with competitive experience and proven teaching methodologies</span>
+                  },
+                  {
+                  icon: <Dumbbell className="text-green-400" size={28} />,
+                  title: <span className="text-green-400">Pro Tennis Shop</span>,
+                  description: <span className="text-slate-600">Access quality equipment, apparel, and accessories from leading brands at our on-site pro shop</span>
+                  },
+                  {
+                  icon: <Heart className="text-green-400" size={28} />,
+                  title: <span className="text-green-400">Fitness Center</span>,
+                  description: <span className="text-slate-600">Complement your tennis training with specialized fitness programs designed for tennis athletes</span>
+                  }
+                ].map((feature, index) => (
+                  <FeatureCard
+                  key={`right-${index}`}
+                  icon={feature.icon}
+                  title={feature.title}
+                  description={feature.description}
+                  isRightAligned={true}
+                  delay={index * 0.2}
+                  isVisible={isVisible.features}
+                  />
+                ))}
+                </div>
+              </div>
+              
+              {/* Tennis Video Section with Animation */}
         <div 
           ref={videoRef}
           className={`my-20 transform transition-all duration-1000 ${
