@@ -30,7 +30,7 @@ export default function ContactUsFood() {
                       dietary requirements, we've got you covered
                     </p>
                     <a 
-                      href="Contactus" 
+                      href="/Contactus" 
                       className={`bg-green-700 hover:bg-green-800 text-white py-3 px-6 rounded-md transition-all duration-300 ${isHovered ? 'shadow-lg' : 'shadow'}`}
                       onMouseEnter={() => setIsHovered(true)}
                       onMouseLeave={() => setIsHovered(false)}

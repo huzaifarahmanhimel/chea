@@ -175,11 +175,11 @@ export default function HealthyFood() {
           </motion.h2>
           
           <motion.p variants={itemVariants} className="text-gray-600 max-w-lg text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel commodo dolor. Vivamus eu nunc convallis, finibus arcu quis, ultrices purus.
+            Nourish your body with meals made from real, natural ingredients.Delicious doesn’t have to mean unhealthy—taste the difference nature makes.
           </motion.p>
           
           <motion.p variants={itemVariants} className="text-gray-600 max-w-lg text-lg">
-            In maximus interdum finibus. Praesent vestibulum justo ipsum, quis porttitor nibh porttitor tincidunt.
+            Fuel your day with clean, wholesome food that satisfies.
           </motion.p>
           
           {/* Stats Section */}
@@ -215,6 +215,7 @@ export default function HealthyFood() {
             variants={buttonVariants}
             whileHover="hover"
             whileTap={{ scale: 0.98 }}
+            link="https://www.aloftylife.com/"
           >
             <span className="text-lg">Read More</span>
             <motion.svg 
