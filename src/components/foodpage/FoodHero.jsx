@@ -44,7 +44,7 @@ export default function NutritionHeroSection() {
   };
 
   return (
-    <div className="w-full bg-gradient-to-r from-white to-green-50 overflow-hidden">
+    <div className="w-full bg-gradient-to-r from-white to-green-50 overflow-hidden mx-4 md:mx-8 lg:mx-12 my-6 rounded-3xl shadow-lg">
       <motion.div 
         className="container mx-auto px-6 py-12 md:py-20 flex flex-col md:flex-row items-center justify-between"
         variants={containerVariants}
