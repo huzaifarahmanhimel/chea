@@ -25,7 +25,7 @@ export default function ModernWellnessBlogSection() {
       categories: ["TENNIS", "FITNESS"],
       author: "Leslie Pickett",
       excerpt: "Learn essential tennis tips for beginners and improve your game with simple techniques and drills.",
-      link: "/blog/tennis-tips-for-beginners"
+      link: "https://tennispal.com/tennis-blog/"
 
     },
     {
@@ -36,7 +36,7 @@ export default function ModernWellnessBlogSection() {
        categories: ["MASSAGE PARLOUR", "RELAXATION"],
        author: "Leslie Pickett",
        excerpt: "Enhance your massage experience with aromatic candles designed to calm the senses and create a peaceful ambiance.",
-       link: "/blog/aroma-scented-lovely-candle"
+       link: "https://www.massagemag.com/"
     },
     {
       id: 3,
