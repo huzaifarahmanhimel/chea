@@ -60,7 +60,7 @@ export default function CategorySections() {
       {/* Simple H1 with motion */}
       <div className="w-full text-center py-6">
         <h1 
-          className="text-3xl md:text-4xl font-bold text-green-500 tracking-wide"
+          className="text-3xl md:text-4xl font-bold text-green-600 tracking-wide"
           style={{
             transform: `translateY(${scrollY * 0.1}px)`,
             opacity: Math.max(0.7, 1 - scrollY * 0.001),
@@ -91,9 +91,6 @@ export default function CategorySections() {
       
       {/* Treatment Cards Section */}
       <div className="px-6 md:px-10 pb-20">
-        <h2 className="text-center text-2xl md:text-3xl font-light tracking-wider mb-10 text-green-600">
-          EXPERIENCE <span className="font-bold">ALOFTY LIFE</span>
-        </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8 max-w-6xl mx-auto">
           {treatments.map((treatment, index) => {
