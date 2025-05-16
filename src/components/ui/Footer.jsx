@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Logo and Brand */}
           <div className="flex flex-col space-y-6">
-            <h1 className="text-4xl font-light tracking-widest">CHEA</h1>
+            <h1 className="text-4xl font-light tracking-widest">ALOFTY</h1>
           </div>
 
           {/* Contact Information */}
