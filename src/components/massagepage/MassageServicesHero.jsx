@@ -20,7 +20,7 @@ const MassageServicesHero = () => {
       <div className="absolute inset-0 bg-gray-200 overflow-hidden">
         <div className="absolute inset-0 scale-105 animate-slow-zoom">
           <img 
-            src="https://i.pinimg.com/736x/17/ee/1f/17ee1fb6244a9ed7cae979cfc0961943.jpg" 
+            src="https://i.pinimg.com/736x/fa/3a/c7/fa3ac75cd9426e26766e3a7d86ed05d7.jpg" 
             alt="Woman receiving facial massage" 
             className="w-full h-full object-cover"
           />
