@@ -130,54 +130,53 @@ export default function HeroSlider() {
             slidePosition = 'opacity-0 z-10 translate-x-full';
           }
           
-          return (
+            return (
             <div 
               key={index}
               className={`absolute inset-0 transition-all duration-700 ease-in-out transform ${slidePosition}`}
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${slide.color} opacity-30 z-10`}></div>
               <img 
-                src={slide.image} 
-                alt={slide.altText}
-                className="absolute inset-0 w-full h-full object-cover transform scale-105 transition-transform duration-10000 ease-out"
+              src={slide.image} 
+              alt={slide.altText}
+              className="absolute inset-0 w-full h-full object-cover transform scale-105 transition-transform duration-10000 ease-out"
               />
               <div className="absolute inset-0 z-20">
-                <div className="flex flex-col items-start justify-center h-full max-w-6xl mx-auto px-6 md:px-12">
-                  <div 
-                    className={`transition-all duration-1000 ease-out transform ${
-                      isCurrent ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-                    }`}
+              <div className="flex flex-col items-start justify-center h-full max-w-6xl mx-auto px-6 md:px-12">
+                <div 
+                className={`transition-all duration-1000 ease-out transform ${
+                  isCurrent ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+                }`}
+                >
+                <p className="text-white font-medium tracking-widest mb-2 md:mb-4 opacity-90">
+                  <span className="inline-block w-10 h-px bg-white mr-3 align-middle"></span>
+                  FEATURED TREATMENT
+                </p>
+                <h2 className="text-xl md:text-3xl font-light text-white mb-1 tracking-wide">
+                  {slide.subtitle}
+                </h2>
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 text-white leading-tight">
+                  {slide.title}
+                </h1>
+                <p className="text-white text-lg md:text-xl max-w-lg mb-8 opacity-90">
+                  {slide.description}
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <a 
+                  href="https://docs.google.com/document/d/1kZiRV3FZov9X4sMPdXwErCVqzoXEsxWN_AgjgSEQXxg/edit?tab=t.0"
+                  className="group relative overflow-hidden bg-white text-gray-900 px-8 py-3 rounded-full text-sm font-medium tracking-wider"
                   >
-                    <p className="text-white font-medium tracking-widest mb-2 md:mb-4 opacity-90">
-                      <span className="inline-block w-10 h-px bg-white mr-3 align-middle"></span>
-                      FEATURED TREATMENT
-                    </p>
-                    <h2 className="text-xl md:text-3xl font-light text-white mb-1 tracking-wide">
-                      {slide.subtitle}
-                    </h2>
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 text-white leading-tight">
-                      {slide.title}
-                    </h1>
-                    <p className="text-white text-lg md:text-xl max-w-lg mb-8 opacity-90">
-                      {slide.description}
-                    </p>
-                    <div className="flex flex-wrap gap-4">
-                      <button className="group relative overflow-hidden bg-white text-gray-900 px-8 py-3 rounded-full text-sm font-medium tracking-wider">
-                        <span className="relative z-10">EXPLORE NOW</span>
-                        <span className="absolute inset-0 bg-gray-900 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
-                        <span className="absolute inset-0 bg-white opacity-25 transform translate-x-full transition-transform duration-300 group-hover:translate-x-0"></span>
-                      </button>
-                      <button className="group relative flex items-center gap-2 border border-white text-white px-6 py-3 rounded-full text-sm font-medium tracking-wider overflow-hidden">
-                        <Play className="w-4 h-4" />
-                        <span>WATCH VIDEO</span>
-                        <span className="absolute inset-0 bg-white opacity-10 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
-                      </button>
-                    </div>
-                  </div>
+                  <span className="relative z-10">EXPLORE NOW</span>
+                  <span className="absolute inset-0 bg-gray-900 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+                  <span className="absolute inset-0 bg-white opacity-25 transform translate-x-full transition-transform duration-300 group-hover:translate-x-0"></span>
+                  </a>
+
+                </div>
                 </div>
               </div>
+              </div>
             </div>
-          );
+            );
         })}
         
         {/* Left Slider Arrow */}
