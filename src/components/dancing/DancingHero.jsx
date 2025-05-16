@@ -130,16 +130,7 @@ export default function DancingHero() {
               </motion.button>
             </motion.div>
 
-            {/* Contact */}
-            <motion.div 
-              className="flex items-center text-sm text-zinc-400"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1, duration: 0.8 }}
-            >
-              <span className="mr-2">Contact:</span>
-              <a href="tel:01503-414708" className="hover:text-orange-200 transition-colors">+8801503-414708</a>
-            </motion.div>
+           
           </motion.div>
 
           {/* Right Content - Style Selector */}
