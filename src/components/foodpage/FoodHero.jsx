@@ -31,7 +31,7 @@ export default function FoodyHero() {
   };
 
   return (
-    <div className="w-full bg-green-200 overflow-hidden py-8">
+    <div className="w-full bg-green-100 overflow-hidden py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="py-8 lg:py-12 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -98,7 +98,7 @@ export default function FoodyHero() {
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900">Fast Delivery</h3>
-                  <p className="text-sm text-gray-600">Promise To Deliver Within 30 Mins</p>
+                  <p className="text-sm text-gray-600">Promise To Deliver healthy Food</p>
                 </div>
               </motion.div>
               

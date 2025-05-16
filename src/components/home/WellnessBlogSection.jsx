@@ -46,7 +46,7 @@ export default function ModernWellnessBlogSection() {
        categories: ["NUTRITION", "WELLNESS"],
        author: "Leslie Pickett",
        excerpt: "Explore the benefits of clean eating and how wholesome foods can boost your energy, mood, and overall health.",
-       link: "/blog/nourishing-and-delicious-healthy-foods"
+       link: "https://www.loveandlemons.com/salad-recipes/"
     }
   ];
 
@@ -171,7 +171,7 @@ export default function ModernWellnessBlogSection() {
         }}
       >
         <a 
-          href="/blog"
+          href="https://www.aloftylife.com/food-blog/"
           className="inline-block px-8 py-3 rounded-full text-sm tracking-wide"
           style={{ 
             backgroundColor: 'transparent',
