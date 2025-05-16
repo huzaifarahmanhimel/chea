@@ -68,14 +68,7 @@ export default function ModernFoodHero() {
         stiffness: 200
       }
     },
-    hover: {
-      scale: 1.05,
-      backgroundColor: "#166534", // Tailwind green-800
-      boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
-      transition: {
-        duration: 0.2
-      }
-    },
+   
     tap: {
       scale: 0.95
     }
