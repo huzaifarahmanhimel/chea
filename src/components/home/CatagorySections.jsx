@@ -58,10 +58,7 @@ export default function CategorySections() {
     <div className="bg-stone-100 text-white min-h-screen">
       {/* Modern Header with H1 Button */}
       <div className="sticky top-0 z-50 bg-black/80 backdrop-blur-md w-full px-6 py-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-green-400">ALOFTY LIFE</h1>
-        <button className="bg-green-500 hover:bg-green-600 text-white py-2 px-6 rounded-full transition-all duration-300 text-sm font-medium">
-          BOOK NOW
-        </button>
+        <h1 className="text-2xl font-bold justify-center text-green-400">ALOFTY LIFE EXPERIENCE</h1>
       </div>
       
       {/* Hero Quote Section with reduced spacing */}
@@ -84,9 +81,6 @@ export default function CategorySections() {
       
       {/* Treatment Cards Section */}
       <div className="px-6 md:px-10 pb-20">
-        <h2 className="text-center text-2xl md:text-3xl font-light tracking-wider mb-10 text-green-600">
-          EXPERIENCE <span className="font-bold">ALOFTY LIFE</span>
-        </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8 max-w-6xl mx-auto">
           {treatments.map((treatment, index) => {
