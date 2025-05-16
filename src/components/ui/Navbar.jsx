@@ -35,15 +35,15 @@ export default function Navbar() {
             {/* Center section: Navigation Links (Desktop) */}
             <div className="hidden md:flex items-center space-x-8">
               <Link to="/" className="font-serif text-white hover:text-slate-300 border-b-2 border-transparent hover:border-gray-900 transition-all pb-1">HOME</Link>
-              <Link to="/MassageParlour" className="font-serif text-green-700 hover:text-black border-b-2 border-transparent hover:border-orange-300 transition-all pb-1">MASSAGE PARLOUR</Link>
-              <Link to="/DancingPages" className="font-serif text-green-700 hover:text-black border-b-2 border-transparent hover:border-orange-300 transition-all pb-1">WAKE & SHAKE</Link>
+              <Link to="/MassageParlour" className="font-serif text-green-700 hover:text-green-500 border-b-2 border-transparent hover:border-orange-300 transition-all pb-1">MASSAGE PARLOUR</Link>
+              <Link to="/DancingPages" className="font-serif text-green-700 hover:text-green-500 border-b-2 border-transparent hover:border-orange-300 transition-all pb-1">WAKE & SHAKE</Link>
 
               {/* Logo */}
-              <Link to="/" className=" text-green-800 text-3xl font-serif tracking-widest">ALOFTY</Link>
+              <Link to="/" className=" text-green-400 text-3xl font-serif tracking-widest">ALOFTY</Link>
 
-              <Link to="/TennisPage" className="font-serif text-green-700 hover:text-black border-b-2 border-transparent hover:border-orange-300 transition-all pb-1">TENNIS</Link>
-              <Link to="/FoodBusiness" className="font-serif text-green-700 hover:text-black border-b-2 border-transparent hover:border-emerald-950 transition-all pb-1">HEALTHY FOOD</Link>
-              <Link to="/contactus" className="font-serif text-green-700 hover:text-black border-b-2 border-transparent hover:border-orange-300 transition-all pb-1">CONTACT US</Link>
+              <Link to="/TennisPage" className="font-serif text-green-700 hover:text-green-500 border-b-2 border-transparent hover:border-orange-300 transition-all pb-1">TENNIS</Link>
+              <Link to="/FoodBusiness" className="font-serif text-green-700 hover:text-green-500border-b-2 border-transparent hover:border-emerald-950 transition-all pb-1">HEALTHY FOOD</Link>
+              <Link to="/contactus" className="font-serif text-green-700 hover:text-green-500 border-b-2 border-transparent hover:border-orange-300 transition-all pb-1">CONTACT US</Link>
             </div>
 
             {/* Center logo for mobile */}
