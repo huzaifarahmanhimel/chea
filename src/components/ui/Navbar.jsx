@@ -39,7 +39,7 @@ export default function Navbar() {
               <Link to="/DancingPages" className="font-medium text-orange-300 hover:text-white border-b-2 border-transparent hover:border-orange-300 transition-all pb-1">WAKE & SHAKE</Link>
 
               {/* Logo */}
-              <Link to="/" className=" text-orange-200 text-3xl font-serif tracking-widest">CHEA</Link>
+              <Link to="/" className=" text-orange-200 text-3xl font-serif tracking-widest">ALOFTY</Link>
 
               <Link to="/TennisPage" className="font-medium text-orange-300 hover:text-white border-b-2 border-transparent hover:border-orange-300 transition-all pb-1">TENNIS</Link>
               <Link to="/FoodBusiness" className="font-medium text-green-600 hover:text-black border-b-2 border-transparent hover:border-emerald-950 transition-all pb-1">HEALTHY FOOD</Link>
