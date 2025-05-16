@@ -129,7 +129,7 @@ export default function FounderSection() {
               <p className="text-black text-right">{feature.description}</p>
             </div>
             <div className="mx-4 flex-shrink-0">
-              <div className="bg-green-600 rounded-full p-3 w-12 h-12 flex items-center justify-center">
+              <div className="bg-black rounded-full p-3 w-12 h-12 flex items-center justify-center">
                 {renderIcon(feature.icon)}
               </div>
             </div>
@@ -139,7 +139,7 @@ export default function FounderSection() {
         {alignment === 'right' && (
           <>
             <div className="mx-4 flex-shrink-0">
-              <div className="bg-green-600 rounded-full p-3 w-12 h-12 flex items-center justify-center">
+              <div className="bg-black rounded-full p-3 w-12 h-12 flex items-center justify-center">
                 {renderIcon(feature.icon)}
               </div>
             </div>
@@ -153,7 +153,7 @@ export default function FounderSection() {
         {alignment === 'center' && (
           <div className="text-center w-full">
             <div className="flex justify-center mb-3">
-              <div className="bg-green-600 rounded-full p-3 w-12 h-12 flex items-center justify-center">
+              <div className="bg-black rounded-full p-3 w-12 h-12 flex items-center justify-center">
                 {renderIcon(feature.icon)}
               </div>
             </div>
