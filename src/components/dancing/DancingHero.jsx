@@ -51,7 +51,7 @@ export default function DancingHero() {
     >
       {/* Animated Background Gradient */}
         <motion.div 
-          className="absolute inset-0 bg-gradient-to-t from-white to-amber-50 opacity-70 z-10"
+          className="absolute inset-0 bg-gradient-to-t from-amber-100 to-amber-50 opacity-70 z-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.7 }}
           transition={{ duration: 1.2 }}
