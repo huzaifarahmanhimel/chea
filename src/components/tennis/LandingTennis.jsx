@@ -114,17 +114,6 @@ const LandingTennis = () => {
                   SCHEDULE
                 </button>
               </div>
-
-              {/* Video play button icon on main image */}
-              <button 
-                className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/90 p-4 rounded-full shadow-2xl hover:bg-green-600 hover:text-white transition-all duration-300 z-30 ${
-                  isVisible ? 'scale-100 opacity-100' : 'scale-0 opacity-0'
-                }`}
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-green-600 hover:text-white transition-colors">
-                  <path d="M8 5v14l11-7z"/>
-                </svg>
-              </button>
             </div>
           </div>
         </div>
