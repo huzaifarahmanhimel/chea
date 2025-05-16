@@ -1,301 +1,191 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-export default function ModernFoodHero() {
-  const [windowWidth, setWindowWidth] = useState(null);
+export default function NutritionHeroSection() {
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Set initial width
-    setWindowWidth(window.innerWidth);
-    
-    // Update width on resize
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-    
-    window.addEventListener('resize', handleResize);
-    
-    // Clean up
-    return () => window.removeEventListener('resize', handleResize);
+    setIsVisible(true);
   }, []);
 
-  // Food item animation variants
-  const foodItemVariants = {
-    hidden: { opacity: 0, scale: 0 },
-    visible: (i) => ({
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
       opacity: 1,
-      scale: 1,
       transition: {
-        delay: i * 0.2,
-        duration: 0.8,
-        ease: "easeOut",
-        type: "spring",
-        stiffness: 100
-      }
-    }),
-    hover: {
-      scale: 1.1,
-      rotate: [0, 5, -5, 0],
-      transition: {
-        duration: 0.6
+        delayChildren: 0.3,
+        staggerChildren: 0.2
       }
     }
   };
 
-  // Text animation variants
-  const textVariants = {
-    hidden: { opacity: 0, y: 20 },
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      opacity: 1,
       y: 0,
+      opacity: 1,
       transition: {
-        duration: 0.8,
+        duration: 0.5
+      }
+    }
+  };
+
+  const imageVariants = {
+    hidden: { scale: 0.8, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
         ease: "easeOut"
       }
     }
   };
 
-  // Button animation variants
-  const buttonVariants = {
-    hidden: { opacity: 0, scale: 0 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        delay: 1,
-        duration: 0.5,
-        type: "spring",
-        stiffness: 200
-      }
-    },
-   
-    tap: {
-      scale: 0.95
-    }
-  };
-
-  // Food items data with placeholder images
-  const foodItems = [
-    { id: 1, alt: "Salad bowl", position: "top-12 left-6 lg:left-20", size: "w-24 h-24 lg:w-36 lg:h-36", delay: 0 },
-    { id: 2, alt: "Broccoli", position: "top-1/3 left-1/4", size: "w-16 h-16", delay: 0.2 },
-    { id: 3, alt: "Avocado", position: "top-1/4 right-1/4", size: "w-20 h-20", color: "bg-yellow-200", delay: 0.4 },
-    { id: 4, alt: "Tomato", position: "top-1/2 right-12 lg:right-32", size: "w-12 h-12", color: "bg-red-400", delay: 0.6 },
-    { id: 5, alt: "Corn", position: "bottom-24 left-1/4", size: "w-14 h-14", delay: 0.8 },
-    { id: 6, alt: "Broccoli", position: "bottom-24 right-8 md:right-20", size: "w-16 h-16", delay: 1 },
-    { id: 7, alt: "Egg", position: "bottom-36 sm:bottom-48 left-20 md:left-32", size: "w-14 h-14", color: "bg-gray-100", delay: 1.2 }
-  ];
-
   return (
-    <motion.div 
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      className="relative w-full overflow-hidden bg-gradient-to-br from-white via-green-50 to-white py-16 px-4 sm:px-6 lg:px-8"
-    >
-      {/* Animated background shapes */}
-      <motion.div
-        animate={{ 
-          rotate: 360,
-          y: [0, 10, 0],
-        }}
-        transition={{ 
-          rotate: { duration: 20, repeat: Infinity, ease: "linear" },
-          y: { duration: 5, repeat: Infinity, ease: "easeInOut", repeatType: "reverse" }
-        }}
-        className="absolute -z-10 top-0 right-0 w-96 h-96 rounded-full bg-gradient-to-r from-green-300/20 to-transparent blur-3xl"
-      />
-      
-      <motion.div
-        animate={{ 
-          rotate: -360,
-          x: [0, -10, 0],
-        }}
-        transition={{ 
-          rotate: { duration: 25, repeat: Infinity, ease: "linear" },
-          x: { duration: 6, repeat: Infinity, ease: "easeInOut", repeatType: "reverse" }
-        }}
-        className="absolute -z-10 bottom-0 left-0 w-64 h-64 rounded-full bg-gradient-to-r from-yellow-300/20 to-transparent blur-3xl"
-      />
-
-      {/* Decorative food images with animation */}
-      {foodItems.map((item) => (
-        <motion.div
-          key={item.id}
-          className={`absolute ${item.position} ${item.size} z-10`}
-          custom={item.delay}
-          variants={foodItemVariants}
-          initial="hidden"
-          animate="visible"
-          whileHover="hover"
-        >
-          <div className={`w-full h-full rounded-full overflow-hidden ${item.color || ''} shadow-lg`}>
-            <motion.div 
-              className="w-full h-full"
-              animate={{ 
-                y: [0, -5, 0],
-              }}
-              transition={{ 
-                y: { duration: 2 + item.id % 2, repeat: Infinity, ease: "easeInOut", repeatType: "reverse" },
-                delay: item.id * 0.1
-              }}
-            >
-              <img 
-                src={`/api/placeholder/${200}/${200}`}
-                alt={item.alt} 
-                className="w-full h-full object-cover" 
-              />
-            </motion.div>
-          </div>
-        </motion.div>
-      ))}
-      
-      {/* Main Content */}
-      <div className="max-w-6xl mx-auto pt-32 pb-16 relative z-20">
-        <motion.div 
-          className="text-center mb-10"
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: { opacity: 0 },
-            visible: {
-              opacity: 1,
-              transition: {
-                staggerChildren: 0.2
-              }
-            }
-          }}
-        >
-          <motion.h2 
-            variants={textVariants}
-            className="text-lg md:text-xl font-medium text-green-600"
+    <div className="w-full bg-gradient-to-r from-white to-green-50 overflow-hidden">
+      <motion.div 
+        className="container mx-auto px-6 py-12 md:py-20 flex flex-col md:flex-row items-center justify-between"
+        variants={containerVariants}
+        initial="hidden"
+        animate={isVisible ? "visible" : "hidden"}
+      >
+        {/* Left Content */}
+        <div className="w-full md:w-1/2 mb-10 md:mb-0 z-10">
+          <motion.p
+            variants={itemVariants}
+            className="text-orange-500 font-medium mb-2"
           >
-            Nourishing Your Body, Delighting Your Palate
-          </motion.h2>
+            Professional Nutritionist
+          </motion.p>
           
           <motion.h1 
-            variants={textVariants}
-            className="mt-4 text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 tracking-tight"
+            variants={itemVariants}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
           >
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-400">
-              Discover NutriPlates
-            </span>
+            <span className="text-green-500">Make Healthy Life</span>
             <br />
-            <span>Where Health Meets Flavor!</span>
+            <span className="text-gray-800">With Naturfood</span>
           </motion.h1>
           
+          <motion.p 
+            variants={itemVariants}
+            className="text-gray-600 mb-8 max-w-lg"
+          >
+            Discover delicious, nutrient-rich meals designed by expert nutritionists. 
+            Our balanced food plans help you achieve your health goals while enjoying every bite.
+          </motion.p>
+          
           <motion.div 
-            className="mt-4 flex justify-center"
-            variants={textVariants}
+            variants={itemVariants}
+            className="flex flex-col sm:flex-row items-center gap-6"
           >
-            <motion.div 
-              className="w-48 md:w-64 h-1 bg-gradient-to-r from-green-600 to-green-400 rounded"
-              animate={{
-                width: ["0%", "100%", "100%", "0%", "100%"],
-              }}
-              transition={{
-                duration: 3,
-                times: [0, 0.2, 0.7, 0.75, 1],
-                repeat: Infinity,
-                repeatDelay: 5
-              }}
-            />
-          </motion.div>
-        </motion.div>
-        
-        {/* Call to action */}
-        <motion.div 
-          className="mt-16 flex justify-center"
-          variants={buttonVariants}
-          initial="hidden"
-          animate="visible"
-          whileHover="hover"
-          whileTap="tap"
-        >
-          <motion.button 
-            className="bg-green-700 text-white py-4 px-8 rounded-xl font-medium text-lg shadow-lg flex items-center space-x-2"
-          >
-            <span>Explore Meal Plans</span>
-            <motion.svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              className="h-6 w-6" 
-              fill="none" 
-              viewBox="0 0 24 24" 
-              stroke="currentColor"
-              animate={{
-                x: [0, 5, 0]
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "reverse",
-                ease: "easeInOut"
-              }}
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-orange-500 text-white px-8 py-3 rounded-lg font-medium flex items-center"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </motion.svg>
-          </motion.button>
-        </motion.div>
-        
-        {/* Floating food cards */}
-        <motion.div 
-          className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8"
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: { opacity: 0 },
-            visible: {
-              opacity: 1,
-              transition: {
-                staggerChildren: 0.3,
-                delayChildren: 0.5
-              }
-            }
-          }}
-        >
-          {[1, 2, 3].map((item) => (
+              Get Started
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+            </motion.button>
+            
             <motion.div
-              key={item}
-              className="bg-white/80 backdrop-blur-md p-6 rounded-2xl shadow-xl"
-              variants={{
-                hidden: { y: 50, opacity: 0 },
-                visible: { 
-                  y: 0, 
-                  opacity: 1,
-                  transition: {
-                    duration: 0.8,
-                    type: "spring",
-                    stiffness: 100
-                  }
-                }
-              }}
-              whileHover={{
-                y: -10,
-                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
-              }}
+              whileHover={{ scale: 1.05 }}
+              className="flex items-center gap-3 text-green-600 cursor-pointer"
             >
-              <div className="w-full h-40 mb-4 overflow-hidden rounded-lg">
-                <motion.img
-                  src={`/api/placeholder/${400}/${300}`}
-                  alt={`Healthy food option ${item}`}
-                  className="w-full h-full object-cover"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ duration: 0.5 }}
-                />
+              <div className="bg-white p-2 rounded-full shadow-md">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-800">
-                {item === 1 ? "Balanced Bowls" : item === 2 ? "Fresh Greens" : "Power Proteins"}
-              </h3>
-              <p className="mt-2 text-gray-600">
-                {item === 1 
-                  ? "Perfectly portioned nutrients for optimal health" 
-                  : item === 2 
-                  ? "Farm-fresh vegetables packed with vitamins" 
-                  : "Lean proteins to fuel your active lifestyle"}
-              </p>
+              <span>See How Our Menus<br />Are Prepared</span>
             </motion.div>
-          ))}
+          </motion.div>
+          
+          <motion.div 
+            variants={itemVariants}
+            className="mt-12 flex items-center"
+          >
+            <div className="flex -space-x-4">
+              <img className="w-10 h-10 rounded-full border-2 border-white" src="/api/placeholder/100/100" alt="Customer" />
+              <img className="w-10 h-10 rounded-full border-2 border-white" src="/api/placeholder/100/100" alt="Customer" />
+              <img className="w-10 h-10 rounded-full border-2 border-white" src="/api/placeholder/100/100" alt="Customer" />
+            </div>
+            <div className="ml-4">
+              <p className="font-medium text-gray-800">Our Happy Customers</p>
+              <div className="flex items-center">
+                <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <span className="ml-1 text-gray-700">9.5 (12K+ Reviews)</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+        
+        {/* Right Content - Food Image */}
+        <motion.div 
+          className="w-full md:w-1/2 relative"
+          variants={imageVariants}
+        >
+          <div className="bg-orange-400 rounded-full w-full aspect-square max-w-xl relative overflow-hidden mx-auto">
+            <motion.img
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+              src="/api/placeholder/500/500" 
+              alt="Healthy food bowl"
+              className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 w-5/6"
+            />
+            
+            {/* Decorative elements */}
+            <motion.img
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.7, duration: 0.6 }}
+              src="/api/placeholder/60/60" 
+              alt="Lime"
+              className="absolute top-16 right-16 w-16 h-16 rounded-full"
+            />
+            
+            <motion.img
+              initial={{ x: 20, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 0.8, duration: 0.6 }}
+              src="/api/placeholder/40/40" 
+              alt="Tomato"
+              className="absolute bottom-24 left-12 w-10 h-10 rounded-full"
+            />
+            
+            <motion.img
+              initial={{ x: -20, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 0.9, duration: 0.6 }}
+              src="/api/placeholder/50/50" 
+              alt="Herbs"
+              className="absolute bottom-32 right-5 w-12 h-12"
+            />
+          </div>
         </motion.div>
-      </div>
-    </motion.div>
+      </motion.div>
+      
+      {/* Background decoration */}
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.15 }}
+        transition={{ delay: 1, duration: 1 }}
+        className="absolute top-0 right-0 w-96 h-96 bg-green-400 rounded-full filter blur-3xl -z-10"
+      />
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.1 }}
+        transition={{ delay: 1.2, duration: 1 }}
+        className="absolute bottom-0 left-0 w-96 h-96 bg-orange-400 rounded-full filter blur-3xl -z-10"
+      />
+    </div>
   );
 }
